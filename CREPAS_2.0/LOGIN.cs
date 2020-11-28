@@ -46,19 +46,16 @@ namespace CREPAS_2._0
 
                 //Hago la Consulta
                 //string commandString = "SELECT Nombre, password FROM pruebas WHERE Nombre= " + this.textBox1 + " AND password= " + this.textBox2 + "";
-                string queryNombre = "Select Nombre FROM Usuarios WHERE Nombre = '"+usuario+"'";
-                string queryPassword = "Select password FROM Usuarios WHERE Nombre = '" + usuario + "'";
+                string queryNombre = "Select Nombre,password FROM Usuarios WHERE Nombre = '"+usuario+"'";
+               //string queryPassword = "Select password FROM Usuarios WHERE Nombre = '" + usuario + "'";
                 //Instrucciones para recibir el nombre de la bd
                 SqlCommand cmdn = new SqlCommand(queryNombre, conexion);
                 SqlDataReader drn = cmdn.ExecuteReader();
                 drn.Read();
-                //Instrucciones para recibir el password
-                //SqlCommand cmdp = new SqlCommand(queryPassword, conexion);
-                //SqlDataReader drp = cmdn.ExecuteReader();
-                //drp.Read();
+              
                 
-                if (usuario==drn[0].ToString())
-                    //&& contraseña==drp.ToString())
+                
+                if (usuario==drn[0].ToString()&& contraseña ==drn[1].ToString())
                 {
                     PEDIDOS pedidos = new PEDIDOS();
                     pedidos.Show();
