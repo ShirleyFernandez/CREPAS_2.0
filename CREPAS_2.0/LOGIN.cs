@@ -29,7 +29,7 @@ namespace CREPAS_2._0
         {
             string usuario, contraseña;
             //Conexión para el usuario de la BD :D 
-            SqlConnection conexion = new SqlConnection("Data Source=equipo3.database.windows.net;Initial Catalog=pruebas;Persist Security Info=True; User ID=Crepas;Password=Elrinconcito123");
+            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
             conexion.Open();
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
