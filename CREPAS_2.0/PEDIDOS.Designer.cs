@@ -52,6 +52,9 @@ namespace CREPAS_2._0
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -148,21 +151,21 @@ namespace CREPAS_2._0
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(417, 92);
+            this.comboBox1.Location = new System.Drawing.Point(387, 141);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(700, 96);
+            this.textBox1.Location = new System.Drawing.Point(670, 143);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(119, 22);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(417, 170);
+            this.textBox2.Location = new System.Drawing.Point(387, 214);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(208, 22);
             this.textBox2.TabIndex = 11;
@@ -170,7 +173,7 @@ namespace CREPAS_2._0
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(700, 170);
+            this.comboBox2.Location = new System.Drawing.Point(670, 214);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(119, 24);
             this.comboBox2.TabIndex = 13;
@@ -179,7 +182,7 @@ namespace CREPAS_2._0
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(381, 234);
+            this.listBox1.Location = new System.Drawing.Point(371, 295);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(462, 228);
             this.listBox1.TabIndex = 14;
@@ -188,7 +191,7 @@ namespace CREPAS_2._0
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(414, 67);
+            this.label3.Location = new System.Drawing.Point(383, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 22);
             this.label3.TabIndex = 15;
@@ -198,7 +201,7 @@ namespace CREPAS_2._0
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(697, 67);
+            this.label4.Location = new System.Drawing.Point(279, -24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 22);
             this.label4.TabIndex = 16;
@@ -208,7 +211,7 @@ namespace CREPAS_2._0
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(415, 145);
+            this.label5.Location = new System.Drawing.Point(383, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 22);
             this.label5.TabIndex = 17;
@@ -218,7 +221,7 @@ namespace CREPAS_2._0
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(696, 145);
+            this.label6.Location = new System.Drawing.Point(666, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 22);
             this.label6.TabIndex = 18;
@@ -228,7 +231,7 @@ namespace CREPAS_2._0
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("CHICKEN Pie Height", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(436, 206);
+            this.label7.Location = new System.Drawing.Point(426, 267);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(331, 25);
             this.label7.TabIndex = 19;
@@ -275,12 +278,43 @@ namespace CREPAS_2._0
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(383, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(92, 22);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "CATEGORIA:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(547, 67);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(242, 24);
+            this.comboBox3.TabIndex = 25;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(667, 111);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(85, 22);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "CANTIDAD:";
+            // 
             // PEDIDOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(895, 612);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -331,5 +365,8 @@ namespace CREPAS_2._0
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label9;
     }
 }
