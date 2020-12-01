@@ -34,7 +34,7 @@ namespace CREPAS_2._0
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
             //
-            if (usuario == "" || contraseña == "")
+            if (usuario == null || contraseña == null)
             {
                 MessageBox.Show(" Inserte Usuario y Contraseña", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.textBox1.Focus();
@@ -42,30 +42,35 @@ namespace CREPAS_2._0
             }
             else
             {
-                SqlConnection SQLConnection = new SqlConnection();
+                try
+                {
+                    SqlConnection SQLConnection = new SqlConnection();
 
-                //Hago la Consulta
-                //string commandString = "SELECT Nombre, password FROM pruebas WHERE Nombre= " + this.textBox1 + " AND password= " + this.textBox2 + "";
-                string queryNombre = "Select Nombre,password FROM Usuarios WHERE Nombre = '"+usuario+"'";
-               //string queryPassword = "Select password FROM Usuarios WHERE Nombre = '" + usuario + "'";
-                //Instrucciones para recibir el nombre de la bd
-                SqlCommand cmdn = new SqlCommand(queryNombre, conexion);
-                SqlDataReader drn = cmdn.ExecuteReader();
-                drn.Read();
-              
-                
-                
-                if (usuario==drn[0].ToString()&& contraseña ==drn[1].ToString())
-                {
-                    PEDIDOS pedidos = new PEDIDOS();
-                    pedidos.Show();
-                    this.Hide();
+                    //Hago la Consulta
+                    //string commandString = "SELECT Nombre, password FROM pruebas WHERE Nombre= " + this.textBox1 + " AND password= " + this.textBox2 + "";
+                    string queryNombre = "Select nombre,pass FROM Usuarios WHERE nombre = '" + usuario + "'";
+                    //string queryPassword = "Select password FROM Usuarios WHERE Nombre = '" + usuario + "'";
+                    //Instrucciones para recibir el nombre de la bd
+                    SqlCommand cmdn = new SqlCommand(queryNombre, conexion);
+                    SqlDataReader drn = cmdn.ExecuteReader();
+                    drn.Read();
                     
+                        if (contraseña == drn[1].ToString())
+                        {
+                            PEDIDOS pedidos = new PEDIDOS();
+                            pedidos.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario o Contraseña incorrectos", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                 }
-                else
+                catch(System.InvalidOperationException E)
                 {
-                    MessageBox.Show(" Check User Name and Password", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o Contraseña incorrectos", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                
             }
         }   
     }

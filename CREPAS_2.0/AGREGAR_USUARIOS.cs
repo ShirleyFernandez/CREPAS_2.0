@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,23 @@ namespace CREPAS_2._0
             COCINA fr1 = new COCINA();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
+        }
+
+        private void agregar_btn_Click(object sender, EventArgs e)
+        {
+            string nombre, tipo, pass;
+            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
+            conexion.Open();
+            nombre = nombre_txt.Text;
+            tipo = tipo_txt.Text;
+            pass = pass_txt.Text;
+            if (nombre == null || tipo == null || tipo == null)
+            {
+                MessageBox.Show(" Inserte Usuario y Contraseña", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.nombre_txt.Focus();
+                return;
+            }
+
         }
     }
 }

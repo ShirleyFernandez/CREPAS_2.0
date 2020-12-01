@@ -38,7 +38,6 @@ namespace CREPAS_2._0
             this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,11 +46,10 @@ namespace CREPAS_2._0
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.nombre_txt = new System.Windows.Forms.TextBox();
+            this.pass_txt = new System.Windows.Forms.TextBox();
+            this.tipo_txt = new System.Windows.Forms.ComboBox();
+            this.agregar_btn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,32 +63,32 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem,
             this.tomarPedidoToolStripMenuItem,
             this.pedidosCocinaToolStripMenuItem,
-            this.opcionesToolStripMenuItem,
-            this.cuentasToolStripMenuItem});
+            this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(717, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(538, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // tomarPedidoToolStripMenuItem
             // 
             this.tomarPedidoToolStripMenuItem.Name = "tomarPedidoToolStripMenuItem";
-            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.tomarPedidoToolStripMenuItem.Text = "Tomar Pedido";
             this.tomarPedidoToolStripMenuItem.Click += new System.EventHandler(this.tomarPedidoToolStripMenuItem_Click);
             // 
             // pedidosCocinaToolStripMenuItem
             // 
             this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
-            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
             this.pedidosCocinaToolStripMenuItem.Click += new System.EventHandler(this.pedidosCocinaToolStripMenuItem_Click);
             // 
@@ -101,32 +99,26 @@ namespace CREPAS_2._0
             this.cerrarSesiónToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // agregarNuevoUsuarioToolStripMenuItem
             // 
             this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // cuentasToolStripMenuItem
-            // 
-            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
-            this.cuentasToolStripMenuItem.Text = "Cuentas";
             // 
             // panel1
             // 
@@ -134,18 +126,20 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(1, 12);
+            this.panel1.Location = new System.Drawing.Point(1, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 439);
+            this.panel1.Size = new System.Drawing.Size(234, 357);
             this.panel1.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("CHICKEN Pie Height", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 303);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 246);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(264, 100);
+            this.label6.Size = new System.Drawing.Size(175, 72);
             this.label6.TabIndex = 3;
             this.label6.Text = "Hola, recuerda registar\r\na los usuarios que\r\nvan a acceder al sistema \r\n\r\n";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -153,20 +147,22 @@ namespace CREPAS_2._0
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("CHICKEN Pie Height", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(21, 44);
+            this.label1.Location = new System.Drawing.Point(1, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 32);
+            this.label1.Size = new System.Drawing.Size(233, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "USUARIOS DEL SISTEMA";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 112);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 91);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 155);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -174,102 +170,101 @@ namespace CREPAS_2._0
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Quotable", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(370, 52);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(239, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 37);
+            this.label2.Size = new System.Drawing.Size(268, 31);
             this.label2.TabIndex = 7;
             this.label2.Text = "Registro de Usuarios";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(356, 126);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(277, 102);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 22);
+            this.label3.Size = new System.Drawing.Size(69, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(356, 202);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(277, 164);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
+            this.label4.Size = new System.Drawing.Size(124, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Tipo de Usuario:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(356, 281);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(277, 228);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 22);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Contraseña:";
             // 
-            // textBox1
+            // nombre_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(359, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 22);
-            this.textBox1.TabIndex = 11;
+            this.nombre_txt.Location = new System.Drawing.Point(279, 123);
+            this.nombre_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombre_txt.Name = "nombre_txt";
+            this.nombre_txt.Size = new System.Drawing.Size(205, 20);
+            this.nombre_txt.TabIndex = 11;
             // 
-            // textBox2
+            // pass_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(359, 306);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 22);
-            this.textBox2.TabIndex = 12;
+            this.pass_txt.Location = new System.Drawing.Point(279, 249);
+            this.pass_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pass_txt.Name = "pass_txt";
+            this.pass_txt.Size = new System.Drawing.Size(205, 20);
+            this.pass_txt.TabIndex = 12;
             // 
-            // comboBox1
+            // tipo_txt
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(359, 227);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 24);
-            this.comboBox1.TabIndex = 13;
+            this.tipo_txt.FormattingEnabled = true;
+            this.tipo_txt.Location = new System.Drawing.Point(279, 184);
+            this.tipo_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipo_txt.Name = "tipo_txt";
+            this.tipo_txt.Size = new System.Drawing.Size(205, 21);
+            this.tipo_txt.TabIndex = 13;
             // 
-            // button1
+            // agregar_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Chicken Quiche", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(306, 375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 40);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "AGREGAR";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Chicken Quiche", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(552, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 37);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.agregar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregar_btn.Location = new System.Drawing.Point(323, 296);
+            this.agregar_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregar_btn.Name = "agregar_btn";
+            this.agregar_btn.Size = new System.Drawing.Size(116, 32);
+            this.agregar_btn.TabIndex = 14;
+            this.agregar_btn.Text = "AGREGAR";
+            this.agregar_btn.UseVisualStyleBackColor = true;
+            this.agregar_btn.Click += new System.EventHandler(this.agregar_btn_Click);
             // 
             // AGREGAR_USUARIOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(717, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(538, 366);
+            this.Controls.Add(this.agregar_btn);
+            this.Controls.Add(this.tipo_txt);
+            this.Controls.Add(this.pass_txt);
+            this.Controls.Add(this.nombre_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AGREGAR_USUARIOS";
             this.Text = "AGREGAR_USUARIOS";
             this.menuStrip1.ResumeLayout(false);
@@ -292,7 +287,6 @@ namespace CREPAS_2._0
         private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -300,11 +294,10 @@ namespace CREPAS_2._0
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox nombre_txt;
+        private System.Windows.Forms.TextBox pass_txt;
+        private System.Windows.Forms.ComboBox tipo_txt;
+        private System.Windows.Forms.Button agregar_btn;
         private System.Windows.Forms.Label label6;
     }
 }
