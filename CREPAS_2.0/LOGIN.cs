@@ -72,7 +72,12 @@ namespace CREPAS_2._0
                 }
                 
             }
-        }   
+        }
+        //cambio prueba
+        private void LOGIN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
