@@ -127,7 +127,7 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 357);
             this.panel1.TabIndex = 6;
@@ -160,7 +160,7 @@ namespace CREPAS_2._0
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(38, 91);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@ namespace CREPAS_2._0
             // nombre_txt
             // 
             this.nombre_txt.Location = new System.Drawing.Point(279, 123);
-            this.nombre_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombre_txt.Margin = new System.Windows.Forms.Padding(2);
             this.nombre_txt.Name = "nombre_txt";
             this.nombre_txt.Size = new System.Drawing.Size(205, 20);
             this.nombre_txt.TabIndex = 11;
@@ -222,8 +222,9 @@ namespace CREPAS_2._0
             // pass_txt
             // 
             this.pass_txt.Location = new System.Drawing.Point(279, 249);
-            this.pass_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pass_txt.Margin = new System.Windows.Forms.Padding(2);
             this.pass_txt.Name = "pass_txt";
+            this.pass_txt.PasswordChar = '*';
             this.pass_txt.Size = new System.Drawing.Size(205, 20);
             this.pass_txt.TabIndex = 12;
             // 
@@ -231,7 +232,7 @@ namespace CREPAS_2._0
             // 
             this.tipo_txt.FormattingEnabled = true;
             this.tipo_txt.Location = new System.Drawing.Point(279, 184);
-            this.tipo_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipo_txt.Margin = new System.Windows.Forms.Padding(2);
             this.tipo_txt.Name = "tipo_txt";
             this.tipo_txt.Size = new System.Drawing.Size(205, 21);
             this.tipo_txt.TabIndex = 13;
@@ -240,7 +241,7 @@ namespace CREPAS_2._0
             // 
             this.agregar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregar_btn.Location = new System.Drawing.Point(323, 296);
-            this.agregar_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregar_btn.Margin = new System.Windows.Forms.Padding(2);
             this.agregar_btn.Name = "agregar_btn";
             this.agregar_btn.Size = new System.Drawing.Size(116, 32);
             this.agregar_btn.TabIndex = 14;
@@ -264,9 +265,10 @@ namespace CREPAS_2._0
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AGREGAR_USUARIOS";
             this.Text = "AGREGAR_USUARIOS";
+            this.Load += new System.EventHandler(this.AGREGAR_USUARIOS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

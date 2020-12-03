@@ -50,13 +50,42 @@ namespace CREPAS_2._0
             nombre = nombre_txt.Text;
             tipo = tipo_txt.Text;
             pass = pass_txt.Text;
-            if (nombre == null || tipo == null || tipo == null)
+            if (nombre == null || tipo == null || pass == null)
             {
-                MessageBox.Show(" Inserte Usuario y Contraseña", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" Inserte todos los datos", "STICS Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.nombre_txt.Focus();
                 return;
             }
+            MessageBox.Show(tipo_txt.Text);
+            /*string query = "INSERT INTO Usuarios (tipo,nombre,pass) VALUES (" +tipo+",'"+nombre+"',"+pass+")";
+            SqlCommand cmdn = new SqlCommand(query, conexion);
+            cmdn.ExecuteReader();
+            nombre_txt.Clear();
+            pass_txt.Clear();*/
+        }
 
+        private void AGREGAR_USUARIOS_Load(object sender, EventArgs e)
+        {
+            DataTable dtu = new DataTable();
+            dtu.Columns.Add("id");
+            dtu.Columns.Add("nombre");
+
+            DataRow dru1 = dtu.NewRow();
+            dru1["id"] = "001";
+            dru1["nombre"] = "Administrador";
+            dtu.Rows.Add(dru1);
+            DataRow dru2 = dtu.NewRow();
+            dru2["id"] = "002";
+            dru2["nombre"] = "Cocinero";
+            dtu.Rows.Add(dru2);
+            DataRow dru3 = dtu.NewRow();
+            dru3["id"] = "003";
+            dru3["nombre"] = "Mesero";
+            dtu.Rows.Add(dru3);
+
+            tipo_txt.ValueMember = "id";
+            tipo_txt.DisplayMember = "nombre";
+            tipo_txt.DataSource = dtu;
         }
     }
 }
