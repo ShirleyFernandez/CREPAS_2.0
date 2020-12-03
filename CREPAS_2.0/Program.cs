@@ -16,8 +16,7 @@ namespace CREPAS_2._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AGREGAR_USUARIOS());
-            //Application.Run(new LOGIN());
+            Application.Run(new LOGIN());
         }
     }
 }
