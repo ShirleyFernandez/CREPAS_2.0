@@ -58,6 +58,12 @@
     <Compile Include="COCINA.Designer.cs">
       <DependentUpon>COCINA.cs</DependentUpon>
     </Compile>
+    <Compile Include="ELIMINAR_USUARIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ELIMINAR_USUARIOS.Designer.cs">
+      <DependentUpon>ELIMINAR_USUARIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="COCINA.resx">
       <DependentUpon>COCINA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ELIMINAR_USUARIOS.resx">
+      <DependentUpon>ELIMINAR_USUARIOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
