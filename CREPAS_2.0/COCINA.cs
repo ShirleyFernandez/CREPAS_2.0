@@ -55,9 +55,7 @@ namespace CREPAS_2._0
 
         private void COCINA_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'elRinconcitoDataSet.Productos_tiene_Pedidos' Puede moverla o quitarla según sea necesario.
-            this.productos_tiene_PedidosTableAdapter.Fill(this.elRinconcitoDataSet.Productos_tiene_Pedidos);
-
+            
         }
     }
 }
