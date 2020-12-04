@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602167327776",
+    "firebase_url": "https://elrinconcitoapp.firebaseio.com",
+    "project_id": "elrinconcitoapp",
+    "storage_bucket": "elrinconcitoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602167327776:android:265a517ebbf0d3fc0a9045",
+        "android_client_info": {
+          "package_name": "com.example.elrinconcito"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602167327776-92o792ih3beu0k9ntibg15vf1ihbpr6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtF0JXWQTeTk83PjQjgYsxdq8etSgZ_Y0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602167327776-92o792ih3beu0k9ntibg15vf1ihbpr6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "elrinconcitoapp",
+  "private_key_id": "5e3785a24cf7630492df349e7d1cb1cf4dcbe2f1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC5Ed8nUGZ9o/uS\nzGlDqU+gh73ggycN+dXEXMvTBFxamXhOpXPGqLoEiXhxVQMOkP2ynYMForcynJnl\nHZ5fwQpH4gLsezWeQRUfGV3Mp61qa3aAQE+2rmkBiYlTfbm+Ocq9g0v/0QJm30x7\nv2M6MA+dMAekapYW6IDxTyLWLhUI9m0ffFV5iWVaS8vhuqOXHnY8yqycGt8ES5in\n1QlR3unjR/nKPoRBRR8RJMhd1OPZdx19xhIEK9uoc6fUtTXI/ACeAIs2bAVUp7x3\nbw6HYBNC3Iv9r+RSOA/k4zlc2/p7sMDctYDfaO3mTMV6dMkEl3PJUZeYjpBSKRC2\nAyvzmul3AgMBAAECggEADanWnlnuvy7op21lBiRNZy4uZBF6xCriT+WD/NfRE7VJ\n7xCDDDMvzJ7zn/ZlS+GDgXjkj/lz6g4qxIIby7j+T9FNYvUzv7PRYeLnDHGCuZ0m\nehCFchjNUto7I8lf+b3djIFRjpj5QuwQgwBdzJF4zaOapNZjr1xKDMbJbSOo1Ojw\nNpWl+PCJTxEAYwcGPL2X8/gcWQT9gf3fELxEEfEVHXT9PCHrXVMx+U9LhRqzMdbt\nUahZCv1GgsGoPwPy3NBpVaZi6HXtr1g1L+unMTtnTIsB6vxQ1Uzjxk8yMjUz3tPP\nevOQFeZHAqkF7l/lO8pSvLzeB1zh6tJlVhhBwu8pnQKBgQD45HNsptmXtWOhHYUB\nDvfoVVfu2DzdNEF9QZDV7/b4XvWKhvL/roDCGM8IpjoiDsA3COF0wnRMXxohA31L\n4XfHhMWuoP31IMl/KPwTikGdQtGCN32xjOo9XnkZdR3wN42Pa+YKbE2QKEzIIuTC\nE/ZUOoKr9g86yqb3YSIjLlXV8wKBgQC+WtclRE7p8e0Jgvo7ByQcOdL3RS9uugkm\n0nlibxlHLKV3D30sTuh78q+Y6e+N4tWhxrv+/PiwzXsfqX/7bgXlIPgqtj384Ftk\n2V68nXshHE6Gj3MMPzHG0lcoDu1B2G6E6soresk0DaBMhpTWCtD6XBAkocmuzWkr\no3hqFiUrbQKBgQCyjAAZg6A46tDr9adCWSCStRZ9qvYOobwRRQXH03tSNZzjoWeU\n7/RCSVXMGKM/Z2GQmXhTMGQJnXe7EyvBUZ+Bq8e8PJWyUbD63cXnppjnXdW6GmC7\nDCHFoI4zKwctGk0dBARkmckSjzZ1pEKCz5s4VTkEb2IBhPs+H5pDrqu47QKBgDdd\nyLIoOiPFoEJh/FJq80/aachOMUuthLfsBC5jTiDrlX0Z3jijAu/6WKTLdkf4sFaL\nrWavQc57FdLRxE3nZIOOoWAa/dCtmSeuKeYGkCfDSfvNgZMQVnQT/hHCtbOvNgYn\nHIKlBhzD0dowUt4m6z3GxVNCU50qVerBc2a35jvJAoGAMe4qryiqPrprh2YK7hm9\nAtiFFAn966bZVvD+RhZz0lI9hNcIgMAR9GeJ4+0XgKfBjKLzr2t1CPeMRl6AYgkr\nu1lwKGX6oo1EWAcoF3m7UNRRtyYLILPEwf19bf9kXvhag6HvNc0Uk9iJHWSiwiVN\n6QSEPtptmCyPR/en9M8upl4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-t8zqp@elrinconcitoapp.iam.gserviceaccount.com",
+  "client_id": "106196340154582313433",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-t8zqp%40elrinconcitoapp.iam.gserviceaccount.com"
+}
