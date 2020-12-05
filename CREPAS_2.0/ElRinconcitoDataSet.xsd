@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ElRinconcitoDataSet" targetNamespace="http://tempuri.org/ElRinconcitoDataSet.xsd" xmlns:mstns="http://tempuri.org/ElRinconcitoDataSet.xsd" xmlns="http://tempuri.org/ElRinconcitoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ElRinconcitoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ElRinconcitoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CREPAS_2._0.Properties.Settings.GlobalReference.Default.ElRinconcitoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_ProductosCuentasPedidosTableAdapter" GeneratorDataComponentClassName="View_ProductosCuentasPedidosTableAdapter" Name="View_ProductosCuentasPedidos" UserDataComponentName="View_ProductosCuentasPedidosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ElRinconcitoConnectionString (Settings)" DbObjectName="ElRinconcito.dbo.View_ProductosCuentasPedidos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idCuenta, nombreProd, precio, cantidad, costo FROM dbo.View_ProductosCuentasPedidos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idCuenta" DataSetColumn="idCuenta" />
+              <Mapping SourceColumn="nombreProd" DataSetColumn="nombreProd" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="costo" DataSetColumn="costo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ElRinconcitoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ElRinconcitoDataSet" msprop:Generator_UserDSName="ElRinconcitoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_ProductosCuentasPedidos" msprop:Generator_TableClassName="View_ProductosCuentasPedidosDataTable" msprop:Generator_TableVarName="tableView_ProductosCuentasPedidos" msprop:Generator_TablePropName="View_ProductosCuentasPedidos" msprop:Generator_RowDeletingName="View_ProductosCuentasPedidosRowDeleting" msprop:Generator_RowChangingName="View_ProductosCuentasPedidosRowChanging" msprop:Generator_RowEvHandlerName="View_ProductosCuentasPedidosRowChangeEventHandler" msprop:Generator_RowDeletedName="View_ProductosCuentasPedidosRowDeleted" msprop:Generator_UserTableName="View_ProductosCuentasPedidos" msprop:Generator_RowChangedName="View_ProductosCuentasPedidosRowChanged" msprop:Generator_RowEvArgName="View_ProductosCuentasPedidosRowChangeEvent" msprop:Generator_RowClassName="View_ProductosCuentasPedidosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idCuenta" msprop:Generator_ColumnVarNameInTable="columnidCuenta" msprop:Generator_ColumnPropNameInRow="idCuenta" msprop:Generator_ColumnPropNameInTable="idCuentaColumn" msprop:Generator_UserColumnName="idCuenta" type="xs:int" />
+              <xs:element name="nombreProd" msprop:Generator_ColumnVarNameInTable="columnnombreProd" msprop:Generator_ColumnPropNameInRow="nombreProd" msprop:Generator_ColumnPropNameInTable="nombreProdColumn" msprop:Generator_UserColumnName="nombreProd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:int" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" />
+              <xs:element name="costo" msprop:Generator_ColumnVarNameInTable="columncosto" msprop:Generator_ColumnPropNameInRow="costo" msprop:Generator_ColumnPropNameInTable="costoColumn" msprop:Generator_UserColumnName="costo" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

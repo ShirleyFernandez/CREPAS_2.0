@@ -52,7 +52,7 @@ namespace CREPAS_2._0
         {
 
         }
-        private DataTable cargarCategorias()
+        public DataTable cargarCategorias()
         {
             conexion.Open();
             DataTable dt = new DataTable();
@@ -64,23 +64,72 @@ namespace CREPAS_2._0
             return dt;
         }
 
+        //public DataTable cargarProductos()
+        //{
+        //    int indice = cbx_categorias.SelectedIndex + 1;
+        //    String ind = indice.ToString();
+        //    //int idCatp = 2;
+        //    DataTable dtp = new DataTable();
 
-        private void PEDIDOS_Load(object sender, EventArgs e)
+        //    //int selectedIndex = cbx_categorias.SelectedIndex;
+        //    Object selectedIntem = cbx_categorias.SelectedItem;
+        //    String categoria = selectedIntem.ToString();
+        //   // String categoria = cbx_categorias.SelectedValue.ToString();
+
+        //    SqlCommand comandoIdCategorias = new SqlCommand("SELECT idCategoria FROM Categorias WHERE nombreCategoria = '" + categoria + "';", conexion);
+        //    comandoIdCategorias.Parameters.AddWithValue("@idCategoria", SqlDbType.Int);
+        //    int idCat = Convert.ToInt32(comandoIdCategorias.ExecuteScalar());
+        //    SqlCommand comandoProducto = new SqlCommand("SELECT nombreProd FROM Productos WHERE idCategoria = '"+indice+"'", conexion);
+        //    SqlDataAdapter adaptadorProc = new SqlDataAdapter(comandoProducto);
+        //    adaptadorProc.Fill(dtp);
+        //    //Console.WriteLine("variable " + ind);
+        //    //Console.ReadKey();
+        //    return dtp;
+        //}
+        public void PEDIDOS_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'elRinconcitoDataSet.View_ProductosCuentasPedidos' Puede moverla o quitarla según sea necesario.
+            this.view_ProductosCuentasPedidosTableAdapter.Fill(this.elRinconcitoDataSet.View_ProductosCuentasPedidos);
             //conexion.Open(); 
 
             cbx_categorias.DataSource = cargarCategorias();
             cbx_categorias.DisplayMember = "nombreCategoria";
             //cbx_categorias.ValueMember = "idCategoria";
-
-            String categoria = cbx_categorias.Text;
-            SqlCommand comandoIdCategorias = new SqlCommand("SELECT idCategoria FROM Categorias WHERE nombreCategoria = '"+categoria+"';", conexion);
-            comandoIdCategorias.Parameters.AddWithValue("@idCategoria", SqlDbType.Int);
-            int idCat = Convert.ToInt32(comandoIdCategorias.ExecuteScalar());
+            //cbx_producto.DataSource = cargarProductos();
+            //cbx_producto.DisplayMember = "nombreProd";
+            //String categoria = cbx_categorias.Text;
 
 
             //conexion.Close();
 
+
+        }
+
+        private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indice = cbx_categorias.SelectedIndex + 1;
+            String ind = indice.ToString();
+            //int idCatp = 2;
+            DataTable dtp = new DataTable();
+
+            //int selectedIndex = cbx_categorias.SelectedIndex;
+            Object selectedIntem = cbx_categorias.SelectedItem;
+            String categoria = selectedIntem.ToString();
+            // String categoria = cbx_categorias.SelectedValue.ToString();
+
+            SqlCommand comandoIdCategorias = new SqlCommand("SELECT idCategoria FROM Categorias WHERE nombreCategoria = '" + categoria + "';", conexion);
+            comandoIdCategorias.Parameters.AddWithValue("@idCategoria", SqlDbType.Int);
+            int idCat = Convert.ToInt32(comandoIdCategorias.ExecuteScalar());
+            SqlCommand comandoProducto = new SqlCommand("SELECT nombreProd FROM Productos WHERE idCategoria = '" + indice + "'", conexion);
+            SqlDataAdapter adaptadorProc = new SqlDataAdapter(comandoProducto);
+            adaptadorProc.Fill(dtp);
+            cbx_producto.DataSource = dtp;
+            cbx_producto.DisplayMember = "nombreProd";
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

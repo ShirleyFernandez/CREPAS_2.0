@@ -58,6 +58,11 @@
     <Compile Include="COCINA.Designer.cs">
       <DependentUpon>COCINA.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElRinconcitoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +98,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ElRinconcitoDataSet.xsc">
+      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ElRinconcitoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElRinconcitoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElRinconcitoDataSet.xss">
+      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
