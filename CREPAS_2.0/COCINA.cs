@@ -52,5 +52,10 @@ namespace CREPAS_2._0
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
+
+        private void COCINA_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

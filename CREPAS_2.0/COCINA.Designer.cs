@@ -36,7 +36,6 @@ namespace CREPAS_2._0
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tomarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,9 +45,11 @@ namespace CREPAS_2._0
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,18 +58,20 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 572);
+            this.panel1.Size = new System.Drawing.Size(210, 465);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("CHICKEN Pie Height", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 278);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(14, 226);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 150);
+            this.label2.Size = new System.Drawing.Size(156, 108);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola, recuerda marcar\r\n los pedidos que ya se\r\nencuentran listos para\r\ncontinuar " +
     "con los \r\nproductos de las\r\n personas siguientes\r\n";
@@ -77,20 +80,22 @@ namespace CREPAS_2._0
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quotable", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(69, 25);
+            this.label1.Location = new System.Drawing.Point(30, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 53);
+            this.label1.Size = new System.Drawing.Size(166, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "COCINA";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(50, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 78);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 165);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -98,31 +103,25 @@ namespace CREPAS_2._0
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Quotable", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(418, 37);
+            this.label3.Location = new System.Drawing.Point(314, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(236, 45);
+            this.label3.Size = new System.Drawing.Size(253, 37);
             this.label3.TabIndex = 1;
             this.label3.Text = "Lista de Pedidos";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Chicken Quiche", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(405, 405);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(390, 317);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 45);
+            this.button1.Size = new System.Drawing.Size(241, 37);
             this.button1.TabIndex = 2;
             this.button1.Text = "PEDIDO TERMINADO";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(321, 91);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(431, 293);
-            this.checkedListBox1.TabIndex = 3;
             // 
             // menuStrip1
             // 
@@ -136,28 +135,29 @@ namespace CREPAS_2._0
             this.cuentasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(770, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(806, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // tomarPedidoToolStripMenuItem
             // 
             this.tomarPedidoToolStripMenuItem.Name = "tomarPedidoToolStripMenuItem";
-            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.tomarPedidoToolStripMenuItem.Text = "Tomar Pedido";
             this.tomarPedidoToolStripMenuItem.Click += new System.EventHandler(this.tomarPedidoToolStripMenuItem_Click);
             // 
             // pedidosCocinaToolStripMenuItem
             // 
             this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
-            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
             this.pedidosCocinaToolStripMenuItem.Click += new System.EventHandler(this.pedidosCocinaToolStripMenuItem_Click);
             // 
@@ -168,52 +168,63 @@ namespace CREPAS_2._0
             this.cerrarSesiónToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // agregarNuevoUsuarioToolStripMenuItem
             // 
             this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
             this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // cuentasToolStripMenuItem
             // 
             this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.cuentasToolStripMenuItem.Text = "Cuentas";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(251, 88);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(500, 212);
+            this.dataGridView1.TabIndex = 5;
             // 
             // COCINA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(770, 473);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(806, 384);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "COCINA";
             this.Text = "COCINA";
+            this.Load += new System.EventHandler(this.COCINA_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +238,6 @@ namespace CREPAS_2._0
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tomarPedidoToolStripMenuItem;
@@ -237,5 +247,6 @@ namespace CREPAS_2._0
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

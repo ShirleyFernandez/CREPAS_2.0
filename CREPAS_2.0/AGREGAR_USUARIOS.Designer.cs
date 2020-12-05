@@ -268,6 +268,7 @@ namespace CREPAS_2._0
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AGREGAR_USUARIOS";
             this.Text = "AGREGAR_USUARIOS";
+            this.Load += new System.EventHandler(this.AGREGAR_USUARIOS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
