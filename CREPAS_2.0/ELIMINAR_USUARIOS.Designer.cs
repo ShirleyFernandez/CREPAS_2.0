@@ -36,25 +36,28 @@
             // Eusuario_txt
             // 
             this.Eusuario_txt.FormattingEnabled = true;
-            this.Eusuario_txt.Location = new System.Drawing.Point(401, 62);
+            this.Eusuario_txt.Location = new System.Drawing.Point(535, 76);
+            this.Eusuario_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Eusuario_txt.Name = "Eusuario_txt";
-            this.Eusuario_txt.Size = new System.Drawing.Size(121, 21);
+            this.Eusuario_txt.Size = new System.Drawing.Size(160, 24);
             this.Eusuario_txt.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(414, 22);
+            this.label1.Location = new System.Drawing.Point(552, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 26);
+            this.label1.Size = new System.Drawing.Size(143, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccione el usuario\r\nque desea eliminar";
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(602, 60);
+            this.btn_eliminar.Location = new System.Drawing.Point(803, 74);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar.Size = new System.Drawing.Size(100, 28);
             this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
@@ -62,12 +65,14 @@
             // 
             // ELIMINAR_USUARIOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Eusuario_txt);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ELIMINAR_USUARIOS";
             this.Text = "ELIMINAR_USUARIOS";
             this.Load += new System.EventHandler(this.ELIMINAR_USUARIOS_Load);
