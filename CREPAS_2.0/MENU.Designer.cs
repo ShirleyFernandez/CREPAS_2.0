@@ -30,15 +30,6 @@ namespace CREPAS_2._0
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENU));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tomarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosCocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,78 +38,9 @@ namespace CREPAS_2._0
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.tomarPedidoToolStripMenuItem,
-            this.pedidosCocinaToolStripMenuItem,
-            this.cuentasToolStripMenuItem,
-            this.opcionesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(560, 28);
-            this.menuStrip1.TabIndex = 30;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // tomarPedidoToolStripMenuItem
-            // 
-            this.tomarPedidoToolStripMenuItem.Name = "tomarPedidoToolStripMenuItem";
-            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
-            this.tomarPedidoToolStripMenuItem.Text = "Tomar Pedido";
-            // 
-            // pedidosCocinaToolStripMenuItem
-            // 
-            this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
-            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
-            this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
-            // 
-            // cuentasToolStripMenuItem
-            // 
-            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
-            this.cuentasToolStripMenuItem.Text = "Cuentas";
-            // 
-            // opcionesToolStripMenuItem
-            // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarNuevoUsuarioToolStripMenuItem,
-            this.editarUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem});
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.opcionesToolStripMenuItem.Text = "Opciones";
-            // 
-            // agregarNuevoUsuarioToolStripMenuItem
-            // 
-            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
-            // 
-            // editarUsuarioToolStripMenuItem
-            // 
-            this.editarUsuarioToolStripMenuItem.Name = "editarUsuarioToolStripMenuItem";
-            this.editarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.editarUsuarioToolStripMenuItem.Text = "Editar usuario";
-            // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario";
             // 
             // panel1
             // 
@@ -166,7 +88,7 @@ namespace CREPAS_2._0
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(339, 62);
+            this.button1.Location = new System.Drawing.Point(350, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 47);
             this.button1.TabIndex = 31;
@@ -175,7 +97,7 @@ namespace CREPAS_2._0
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(339, 130);
+            this.button2.Location = new System.Drawing.Point(350, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 47);
             this.button2.TabIndex = 32;
@@ -184,7 +106,7 @@ namespace CREPAS_2._0
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(339, 322);
+            this.button3.Location = new System.Drawing.Point(350, 303);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 48);
             this.button3.TabIndex = 33;
@@ -193,7 +115,7 @@ namespace CREPAS_2._0
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(339, 213);
+            this.button4.Location = new System.Drawing.Point(350, 204);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 57);
             this.button4.TabIndex = 34;
@@ -210,31 +132,17 @@ namespace CREPAS_2._0
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Name = "MENU";
             this.Text = "MENU";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tomarPedidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pedidosCocinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;

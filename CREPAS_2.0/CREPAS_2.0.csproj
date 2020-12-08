@@ -130,11 +130,23 @@
     <Compile Include="MENU.Designer.cs">
       <DependentUpon>MENU.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODIFICAR_USUARIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODIFICAR_USUARIOS.Designer.cs">
+      <DependentUpon>MODIFICAR_USUARIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="PEDIDOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PEDIDOS.Designer.cs">
       <DependentUpon>PEDIDOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PEDIDOS_PRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PEDIDOS_PRINCIPAL.Designer.cs">
+      <DependentUpon>PEDIDOS_PRINCIPAL.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -153,8 +165,14 @@
     <EmbeddedResource Include="MENU.resx">
       <DependentUpon>MENU.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MODIFICAR_USUARIOS.resx">
+      <DependentUpon>MODIFICAR_USUARIOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PEDIDOS.resx">
       <DependentUpon>PEDIDOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PEDIDOS_PRINCIPAL.resx">
+      <DependentUpon>PEDIDOS_PRINCIPAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
