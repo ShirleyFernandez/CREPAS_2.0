@@ -57,8 +57,8 @@ namespace CREPAS_2._0
                     
                         if (contraseña == drn[1].ToString())
                         {
-                            PEDIDOS pedidos = new PEDIDOS();
-                            pedidos.Show();
+                            MENU MENU = new MENU();
+                            MENU.Show();
                             this.Hide();
                         }
                         else
