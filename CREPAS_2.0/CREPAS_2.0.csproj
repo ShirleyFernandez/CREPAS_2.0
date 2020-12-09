@@ -123,6 +123,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ElRinconcitoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FireBasePush.cs" />
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>

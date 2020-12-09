@@ -8,11 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FirebaseAdmin;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
+using System.IO;
+using System.Net;
 
 namespace CREPAS_2._0
 {
     public partial class COCINA : Form
     {
+        SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
         public COCINA()
         {
             InitializeComponent();
@@ -64,12 +70,47 @@ namespace CREPAS_2._0
         private void button1_Click(object sender, EventArgs e)
         {
             string pedido = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
+            string mesero = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            string producto = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            string mesa = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             conexion.Open();
             string query = "UPDATE Productos_tiene_Pedidos SET estado = 1 WHERE Pedidos_idPedido = " + pedido + "";
             SqlCommand cmdn = new SqlCommand(query, conexion);
             cmdn.ExecuteReader();
+            conexion.Close();        
             COCINA_Load(sender,e);
+            string t = token(mesero);
+            notificar(t, producto, mesa);
+            
+        }
+
+        public void notificar (string token, string producto, string mesa)
+        {
+            FireBasePush pushO = new FireBasePush("AAAAjDP4PCA:APA91bFqNdTImQdJSMYdUMKyWAC2Dg2oPlUkeIp7ez50WqEcrlrBYRm2kKeZ5_vSmV1T9mocKp4eYYRI8BQFP4sNC9w1HtH9byamPS3dFFcCDwueYykZw508Ljgld8ru9b63Ytmg6k0O");
+            pushO.SendPush(new PushMessage()
+            {
+                to = token, //for a topic to": "/topics/foo-bar"
+                notification = new PushMessageData
+                {
+                    title = "Pedido Listo",
+                    text = "Su pedido " + producto + " de la mesa: "+mesa+" esta listo"
+                },
+                data = new
+                {
+                    example = "ey, Ya esta listo"
+                }
+            });
+            conexion.Close();
+        }
+
+        public string token(string mesero)
+        {
+            conexion.Open();
+            string querym = "SELECT token FROM Usuarios WHERE idUsuario = " + mesero + "";
+            SqlCommand cmdn = new SqlCommand(querym, conexion);
+            SqlDataReader drn = cmdn.ExecuteReader();
+            drn.Read();
+            return drn[0].ToString();
         }
     }
 }

@@ -27,21 +27,5 @@ namespace CREPAS_2._0
             SqlCommand cmdn = new SqlCommand(query, conexion);
             cmdn.ExecuteReader();
         }
-
-        private void ELIMINAR_USUARIOS_Load(object sender, EventArgs e)
-        {
-            DataTable Tu = new DataTable();
-            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
-            conexion.Open();
-            string query = "SELECT idUsuario, nombre FROM Usuarios;";
-            SqlDataAdapter da = new SqlDataAdapter(query, conexion);
-            da.Fill(Tu);
-            Eusuario_txt.DisplayMember = "nombre";
-            Eusuario_txt.ValueMember = "idUsuario";
-            Eusuario_txt.DataSource = Tu;
-
-
-
-        }
     }
 }
