@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,7 +56,20 @@ namespace CREPAS_2._0
 
         private void COCINA_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'elRinconcitoDataSet1.View_Cocina' Puede moverla o quitarla según sea necesario.
+            this.view_CocinaTableAdapter.Fill(this.elRinconcitoDataSet1.View_Cocina);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string pedido = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
+            conexion.Open();
+            string query = "UPDATE Productos_tiene_Pedidos SET estado = 1 WHERE Pedidos_idPedido = " + pedido + "";
+            SqlCommand cmdn = new SqlCommand(query, conexion);
+            cmdn.ExecuteReader();
+            COCINA_Load(sender,e);
         }
     }
 }
