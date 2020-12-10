@@ -17,9 +17,16 @@ namespace CREPAS_2._0
         SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
         public PEDIDOS()
         {
-            InitializeComponent();
-        }
 
+        }
+        public PEDIDOS(String cuenta, String mesa)
+        {
+            InitializeComponent();
+            this.cuentas = cuenta;
+            this.mesa = mesa;
+
+        }
+        string mesa, cuentas;
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -114,7 +121,7 @@ namespace CREPAS_2._0
 
         private void AGREGAR_Click(object sender, EventArgs e)
         {
-
+            //SqlCommand comandoPedido = new SqlCommand("INSERT INTO Productos_tiene_Pedidos");
         }
 
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)

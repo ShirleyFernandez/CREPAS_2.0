@@ -29,6 +29,7 @@ namespace CREPAS_2._0
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PEDIDOS_PRINCIPAL));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,10 +50,22 @@ namespace CREPAS_2._0
             this.mesas_box = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.elRinconcitoDataSet = new CREPAS_2._0.ElRinconcitoDataSet();
+            this.elRinconcitoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.elRinconcitoDataSet3 = new CREPAS_2._0.ElRinconcitoDataSet3();
+            this.cuentasMesasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cuentasMesasTableAdapter = new CREPAS_2._0.ElRinconcitoDataSet3TableAdapters.CuentasMesasTableAdapter();
+            this.idCuentaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mesaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasMesasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -142,7 +155,7 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 20);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 482);
             this.panel1.TabIndex = 28;
@@ -175,7 +188,7 @@ namespace CREPAS_2._0
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(32, 131);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -184,13 +197,18 @@ namespace CREPAS_2._0
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(242, 181);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCuentaDataGridViewTextBoxColumn,
+            this.mesaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.cuentasMesasBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(288, 176);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(254, 284);
             this.dataGridView1.TabIndex = 31;
             // 
             // label2
@@ -207,7 +225,7 @@ namespace CREPAS_2._0
             // 
             this.mesas_box.FormattingEnabled = true;
             this.mesas_box.Location = new System.Drawing.Point(242, 91);
-            this.mesas_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mesas_box.Margin = new System.Windows.Forms.Padding(2);
             this.mesas_box.Name = "mesas_box";
             this.mesas_box.Size = new System.Drawing.Size(188, 21);
             this.mesas_box.TabIndex = 33;
@@ -215,7 +233,7 @@ namespace CREPAS_2._0
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(476, 91);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 20);
             this.button1.TabIndex = 34;
@@ -233,12 +251,59 @@ namespace CREPAS_2._0
             this.label3.TabIndex = 35;
             this.label3.Text = "Agregar nueva mesa";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(355, 474);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(249, 23);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "AGREGAR EN LA MESA SELECCIONADA";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // elRinconcitoDataSet
+            // 
+            this.elRinconcitoDataSet.DataSetName = "ElRinconcitoDataSet";
+            this.elRinconcitoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // elRinconcitoDataSetBindingSource
+            // 
+            this.elRinconcitoDataSetBindingSource.DataSource = this.elRinconcitoDataSet;
+            this.elRinconcitoDataSetBindingSource.Position = 0;
+            // 
+            // elRinconcitoDataSet3
+            // 
+            this.elRinconcitoDataSet3.DataSetName = "ElRinconcitoDataSet3";
+            this.elRinconcitoDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cuentasMesasBindingSource
+            // 
+            this.cuentasMesasBindingSource.DataMember = "CuentasMesas";
+            this.cuentasMesasBindingSource.DataSource = this.elRinconcitoDataSet3;
+            // 
+            // cuentasMesasTableAdapter
+            // 
+            this.cuentasMesasTableAdapter.ClearBeforeFill = true;
+            // 
+            // idCuentaDataGridViewTextBoxColumn
+            // 
+            this.idCuentaDataGridViewTextBoxColumn.DataPropertyName = "idCuenta";
+            this.idCuentaDataGridViewTextBoxColumn.HeaderText = "idCuenta";
+            this.idCuentaDataGridViewTextBoxColumn.Name = "idCuentaDataGridViewTextBoxColumn";
+            // 
+            // mesaDataGridViewTextBoxColumn
+            // 
+            this.mesaDataGridViewTextBoxColumn.DataPropertyName = "mesa";
+            this.mesaDataGridViewTextBoxColumn.HeaderText = "mesa";
+            this.mesaDataGridViewTextBoxColumn.Name = "mesaDataGridViewTextBoxColumn";
+            // 
             // PEDIDOS_PRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(620, 484);
+            this.ClientSize = new System.Drawing.Size(620, 509);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.mesas_box);
@@ -248,9 +313,8 @@ namespace CREPAS_2._0
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PEDIDOS_PRINCIPAL";
-            this.Text = "PEDIDOS_PRINCIPAL";
             this.Load += new System.EventHandler(this.PEDIDOS_PRINCIPAL_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -258,6 +322,10 @@ namespace CREPAS_2._0
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cuentasMesasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +352,13 @@ namespace CREPAS_2._0
         private System.Windows.Forms.ComboBox mesas_box;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.BindingSource elRinconcitoDataSetBindingSource;
+        private ElRinconcitoDataSet elRinconcitoDataSet;
+        private ElRinconcitoDataSet3 elRinconcitoDataSet3;
+        private System.Windows.Forms.BindingSource cuentasMesasBindingSource;
+        private ElRinconcitoDataSet3TableAdapters.CuentasMesasTableAdapter cuentasMesasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCuentaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mesaDataGridViewTextBoxColumn;
     }
 }

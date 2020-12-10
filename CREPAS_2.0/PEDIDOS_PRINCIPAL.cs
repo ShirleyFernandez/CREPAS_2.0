@@ -25,6 +25,8 @@ namespace CREPAS_2._0
 
         private void PEDIDOS_PRINCIPAL_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'elRinconcitoDataSet3.CuentasMesas' Puede moverla o quitarla según sea necesario.
+            this.cuentasMesasTableAdapter.Fill(this.elRinconcitoDataSet3.CuentasMesas);
             List<int> lista = new List<int>();
             DataTable dm = new DataTable();
             dm.Columns.Add("mesa");
@@ -57,6 +59,15 @@ namespace CREPAS_2._0
             mesas_box.DisplayMember = "mesa";
             mesas_box.DataSource = dm;
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string cuenta = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            string mesero = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            PEDIDOS ped = new PEDIDOS(cuenta, mesero);
+            ped.Show();
         }
     }
 }

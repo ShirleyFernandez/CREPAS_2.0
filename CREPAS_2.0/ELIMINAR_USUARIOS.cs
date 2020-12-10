@@ -27,5 +27,10 @@ namespace CREPAS_2._0
             SqlCommand cmdn = new SqlCommand(query, conexion);
             cmdn.ExecuteReader();
         }
+
+        private void ELIMINAR_USUARIOS_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
