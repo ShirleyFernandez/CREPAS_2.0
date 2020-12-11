@@ -14,12 +14,13 @@ namespace CREPAS_2._0
 {
     public partial class PEDIDOS : Form
     {
+        string mesa, cuentas;
         SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
         public PEDIDOS()
         {
 
         }
-        public PEDIDOS(String cuenta, String mesa)
+        public PEDIDOS(string cuenta, string mesa)
         {
             InitializeComponent();
             this.cuentas = cuenta;
@@ -27,7 +28,7 @@ namespace CREPAS_2._0
 
 
         }
-        string mesa, cuentas;
+        
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -66,9 +67,8 @@ namespace CREPAS_2._0
             DataTable dt = new DataTable();
             SqlCommand comandoCategorias = new SqlCommand("SELECT nombreCategoria FROM Categorias", conexion);
             SqlDataAdapter adaptadorCat = new SqlDataAdapter(comandoCategorias);
-            //adaptadorCat.SelectCommand = comandoCategorias;
-            //DataTable tablaCat = new DataTable();
             adaptadorCat.Fill(dt);
+            conexion.Close();
             return dt;
         }
 
@@ -82,51 +82,108 @@ namespace CREPAS_2._0
 
         public void CargarVista(String cuenta)
         {
-            
-            SqlCommand vista = new SqlCommand("SELECT Pr.nombreProd, Pr.precio, Pt.nota FROM Pedidos as Pe, Productos as Pr, Productos_tiene_Pedidos as Pt WHERE Pr.idProducto = Pt.Productos_idProducto AND Pe.idPedido = Pt.Pedidos_idPedido AND Pe.idCuenta = " + cuenta, conexion);
-            SqlDataReader drn = vista.ExecuteReader();
-            dataGridView1.Columns.Add("Nombre", "nombre");
-            dataGridView1.Columns.Add("Precio", "precio");
-            dataGridView1.Columns.Add("Notas", "notas");
-
-            if (drn.HasRows)
-            {
-                while (drn.Read())
-                {
-                    dataGridView1.Rows.Add(drn["nombreProd"].ToString(), drn["precio"].ToString(), drn["nota"].ToString());
-                }
-            }
+            conexion.Open();
+            DataTable dt = new DataTable();
+            SqlCommand vista = new SqlCommand("SELECT Pe.idPedido, Pr.nombreProd, Pt.costo, Pt.nota FROM " +
+                "Pedidos as Pe, Productos as Pr, Productos_tiene_Pedidos as Pt WHERE Pr.idProducto = Pt.Productos_idProducto AND Pe.idPedido = Pt.Pedidos_idPedido AND Pe.idCuenta = " + cuenta, conexion);
+            SqlDataAdapter adaptadorCat = new SqlDataAdapter(vista);
+            adaptadorCat.Fill(dt);
+            dataGridView1.DataSource = dt;
             conexion.Close();
         }
 
         private void AGREGAR_Click(object sender, EventArgs e)
         {
-            //SqlCommand comandoPedido = new SqlCommand("INSERT INTO Productos_tiene_Pedidos");
+            string producto = cbx_producto.SelectedValue.ToString();
+            int categoria = cbx_categorias.SelectedIndex + 1;
+            string cantidad = textBox1.Text;
+            string nota = textBox2.Text;
+            int ultimo = ultimoPedido();
+            insertarPedido(mesa, cuentas);
+            string p = precio(producto);
+            int costo = (Convert.ToInt32(p)) * (Convert.ToInt32(cantidad));
+            productosTienePedidos(producto, ultimo, categoria, cuentas, cantidad, nota, costo);
+            PEDIDOS_Load(sender, e);
+        }
+        private void productosTienePedidos(string idProduto, int idPedido, int categoria, string cuenta, string cantidad, string nota, int costo)
+        {
+            conexion.Open();
+            SqlCommand insertarPedido = new SqlCommand("INSERT INTO Productos_tiene_Pedidos(Productos_idProducto, Pedidos_idPedido, Productos_idCategoria, Pedidos_idCuenta, estado, cantidad, nota, costo) " +
+                "VALUES(" + idProduto + "," + idPedido + "," + categoria + "," + cuenta + ",0," + cantidad + ",'" + nota + "'," + costo + ");", conexion);
+            insertarPedido.ExecuteReader();
+            conexion.Close();
+        }
+        public string precio(string idProducto)
+        {
+            conexion.Open();
+            SqlCommand obtenerPrecio = new SqlCommand("SELECT precio FROM Productos WHERE idProducto = " + idProducto + "", conexion);
+            SqlDataReader drn = obtenerPrecio.ExecuteReader();
+            drn.Read();
+            string p = drn[0].ToString();
+            conexion.Close();
+            return p;
+        }
+
+        private void insertarPedido(string mesa, string cuenta)
+        {
+            conexion.Open();
+            SqlCommand insertarPedido = new SqlCommand("INSERT INTO Pedidos (idCuenta, mesa) VALUES(" + cuenta + ", " + mesa + ");", conexion);
+            insertarPedido.ExecuteReader();
+            conexion.Close();
+        }
+        public int ultimoPedido()
+        {
+            conexion.Open();
+            SqlCommand comandoPedido = new SqlCommand("select max(idPedido) from Pedidos;", conexion);
+            SqlDataReader drn = comandoPedido.ExecuteReader();
+            drn.Read();
+            string pedido = drn[0].ToString();
+            int ultimo = Convert.ToInt32(pedido);
+            conexion.Close();
+            return ultimo+1;
+        }
+
+        private void eliminarPtp(string idPedido)
+        {
+            conexion.Open();
+            SqlCommand comandoEliminar = new SqlCommand("DELETE FROM Productos_tiene_Pedidos WHERE Pedidos_idPedido = " + idPedido + "", conexion);
+            comandoEliminar.ExecuteReader();
+            conexion.Close();
+        }
+
+        private void eliminarPedido(string idPedido)
+        {
+            conexion.Open();
+            SqlCommand comandoEliminar = new SqlCommand("DELETE FROM Pedidos WHERE idPedido = " + idPedido + "", conexion);
+            comandoEliminar.ExecuteReader();
+            conexion.Close();
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            string idPedido = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            eliminarPtp(idPedido);
+            eliminarPedido(idPedido);
+            PEDIDOS_Load(sender, e);
         }
 
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
-                int indice = cbx_categorias.SelectedIndex + 1;
-                String ind = indice.ToString();
-                //int idCatp = 2;
+            conexion.Open();
+            int indice = cbx_categorias.SelectedIndex + 1;
+            String ind = indice.ToString();
 
-                DataTable dtp = new DataTable();
+            DataTable dtp = new DataTable();
+            Object selectedIntem = cbx_categorias.SelectedItem;
+            String categoria = selectedIntem.ToString();
+            SqlCommand comandoProducto = new SqlCommand("SELECT idProducto, nombreProd FROM Productos WHERE idCategoria = '" + indice + "'", conexion);
+            SqlDataAdapter adaptadorCat = new SqlDataAdapter(comandoProducto);
+            adaptadorCat.Fill(dtp);
 
-                //int selectedIndex = cbx_categorias.SelectedIndex;
-                Object selectedIntem = cbx_categorias.SelectedItem;
-                String categoria = selectedIntem.ToString();
-                // String categoria = cbx_categorias.SelectedValue.ToString();
-
-                SqlCommand comandoIdCategorias = new SqlCommand("SELECT idCategoria FROM Categorias WHERE nombreCategoria = '" + categoria + "';", conexion);
-                //comandoIdCategorias.Parameters.AddWithValue("@idCategoria", SqlDbType.Int);
-                //int idCat = Convert.ToInt32(comandoIdCategorias.ExecuteScalar());
-                SqlCommand comandoProducto = new SqlCommand("SELECT nombreProd FROM Productos WHERE idCategoria = '" + indice + "'", conexion);
-                SqlDataAdapter adaptadorProc = new SqlDataAdapter(comandoProducto);
-                adaptadorProc.Fill(dtp);
-                cbx_producto.DataSource = dtp;
-                cbx_producto.DisplayMember = "nombreProd";
-
-            }
+            cbx_producto.ValueMember = "idProducto";
+            cbx_producto.DisplayMember = "nombreProd";
+            cbx_producto.DataSource = dtp;
+            conexion.Close();
         }
     }
-
+}

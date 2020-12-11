@@ -113,30 +113,10 @@
     <Compile Include="ELIMINAR_USUARIOS.Designer.cs">
       <DependentUpon>ELIMINAR_USUARIOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="ElRinconcitoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ElRinconcitoDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ElRinconcitoDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ElRinconcitoDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElRinconcitoDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ElRinconcitoDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElRinconcitoDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ElRinconcitoDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="ElRinconcitoDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -209,17 +189,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ElRinconcitoDataSet.xsc">
-      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElRinconcitoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ElRinconcitoDataSet.xss">
-      <DependentUpon>ElRinconcitoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="ElRinconcitoDataSet1.xsc">
       <DependentUpon>ElRinconcitoDataSet1.xsd</DependentUpon>
     </None>
@@ -230,39 +199,6 @@
     </None>
     <None Include="ElRinconcitoDataSet1.xss">
       <DependentUpon>ElRinconcitoDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet2.xsc">
-      <DependentUpon>ElRinconcitoDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElRinconcitoDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ElRinconcitoDataSet2.xss">
-      <DependentUpon>ElRinconcitoDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet3.xsc">
-      <DependentUpon>ElRinconcitoDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElRinconcitoDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ElRinconcitoDataSet3.xss">
-      <DependentUpon>ElRinconcitoDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet4.xsc">
-      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="ElRinconcitoDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ElRinconcitoDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ElRinconcitoDataSet4.xss">
-      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
     </None>
     <None Include="ElRinconcitoDataSet5.xsc">
       <DependentUpon>ElRinconcitoDataSet5.xsd</DependentUpon>

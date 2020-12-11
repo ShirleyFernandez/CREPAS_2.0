@@ -47,21 +47,21 @@ namespace CREPAS_2._0
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.elRinconcitoDataSet1 = new CREPAS_2._0.ElRinconcitoDataSet1();
-            this.viewCocinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.view_CocinaTableAdapter = new CREPAS_2._0.ElRinconcitoDataSet1TableAdapters.View_CocinaTableAdapter();
             this.idPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mesaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewCocinaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.elRinconcitoDataSet1 = new CREPAS_2._0.ElRinconcitoDataSet1();
+            this.view_CocinaTableAdapter = new CREPAS_2._0.ElRinconcitoDataSet1TableAdapters.View_CocinaTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewCocinaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -229,20 +229,6 @@ namespace CREPAS_2._0
             this.dataGridView1.Size = new System.Drawing.Size(646, 212);
             this.dataGridView1.TabIndex = 5;
             // 
-            // elRinconcitoDataSet1
-            // 
-            this.elRinconcitoDataSet1.DataSetName = "ElRinconcitoDataSet1";
-            this.elRinconcitoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // viewCocinaBindingSource
-            // 
-            this.viewCocinaBindingSource.DataMember = "View_Cocina";
-            this.viewCocinaBindingSource.DataSource = this.elRinconcitoDataSet1;
-            // 
-            // view_CocinaTableAdapter
-            // 
-            this.view_CocinaTableAdapter.ClearBeforeFill = true;
-            // 
             // idPedidoDataGridViewTextBoxColumn
             // 
             this.idPedidoDataGridViewTextBoxColumn.DataPropertyName = "idPedido";
@@ -285,6 +271,20 @@ namespace CREPAS_2._0
             this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
             this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // viewCocinaBindingSource
+            // 
+            this.viewCocinaBindingSource.DataMember = "View_Cocina";
+            this.viewCocinaBindingSource.DataSource = this.elRinconcitoDataSet1;
+            // 
+            // elRinconcitoDataSet1
+            // 
+            this.elRinconcitoDataSet1.DataSetName = "ElRinconcitoDataSet1";
+            this.elRinconcitoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // view_CocinaTableAdapter
+            // 
+            this.view_CocinaTableAdapter.ClearBeforeFill = true;
+            // 
             // COCINA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,8 +306,8 @@ namespace CREPAS_2._0
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewCocinaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elRinconcitoDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

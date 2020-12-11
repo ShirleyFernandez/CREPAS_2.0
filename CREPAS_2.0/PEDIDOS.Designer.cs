@@ -43,7 +43,7 @@ namespace CREPAS_2._0
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.AGREGAR = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 474);
             this.panel1.TabIndex = 1;
@@ -104,7 +104,7 @@ namespace CREPAS_2._0
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(36, 121);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 134);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,7 +126,7 @@ namespace CREPAS_2._0
             // 
             this.cbx_producto.FormattingEnabled = true;
             this.cbx_producto.Location = new System.Drawing.Point(275, 167);
-            this.cbx_producto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx_producto.Margin = new System.Windows.Forms.Padding(2);
             this.cbx_producto.Name = "cbx_producto";
             this.cbx_producto.Size = new System.Drawing.Size(157, 21);
             this.cbx_producto.TabIndex = 9;
@@ -134,7 +134,7 @@ namespace CREPAS_2._0
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(477, 167);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(146, 20);
             this.textBox1.TabIndex = 10;
@@ -142,7 +142,7 @@ namespace CREPAS_2._0
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(332, 204);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(291, 20);
             this.textBox2.TabIndex = 11;
@@ -195,7 +195,7 @@ namespace CREPAS_2._0
             // 
             this.AGREGAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AGREGAR.Location = new System.Drawing.Point(275, 459);
-            this.AGREGAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AGREGAR.Margin = new System.Windows.Forms.Padding(2);
             this.AGREGAR.Name = "AGREGAR";
             this.AGREGAR.Size = new System.Drawing.Size(92, 29);
             this.AGREGAR.TabIndex = 20;
@@ -203,22 +203,23 @@ namespace CREPAS_2._0
             this.AGREGAR.UseVisualStyleBackColor = true;
             this.AGREGAR.Click += new System.EventHandler(this.AGREGAR_Click);
             // 
-            // button2
+            // btn_eliminar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(411, 459);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 29);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "ELIMINAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Location = new System.Drawing.Point(411, 459);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(92, 29);
+            this.btn_eliminar.TabIndex = 21;
+            this.btn_eliminar.Text = "ELIMINAR";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(547, 459);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 29);
             this.button4.TabIndex = 23;
@@ -346,7 +347,7 @@ namespace CREPAS_2._0
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.AGREGAR);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -357,7 +358,7 @@ namespace CREPAS_2._0
             this.Controls.Add(this.cbx_producto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PEDIDOS";
             this.Text = "PEDIDOS";
             this.Load += new System.EventHandler(this.PEDIDOS_Load);
@@ -386,7 +387,7 @@ namespace CREPAS_2._0
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AGREGAR;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

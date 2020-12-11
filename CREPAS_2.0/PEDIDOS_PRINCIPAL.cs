@@ -22,18 +22,26 @@ namespace CREPAS_2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             string fecha = DateTime.Today.ToString("yyyy/MM/dd");
             conexion.Open();
-            SqlCommand cmdn = new SqlCommand("INSERT INTO Cuentas(idUsuario, total, fecha) VALUES(1, 0.00, "+fecha+")", conexion);
+            SqlCommand cmdn = new SqlCommand("INSERT INTO Cuentas(idUsuario, total, fecha) VALUES(1, 0.00, '" + fecha + "')", conexion);
             cmdn.ExecuteReader();
             conexion.Close();
+            enviarDatos();
+
         }
 
         public void enviarDatos()
         {
             conexion.Open();
-            string mesa = mesas_box.SelectedItem.ToString();
+            string mesa = mesas_box.SelectedValue.ToString();
+            SqlCommand comandoPedido = new SqlCommand("SELECT MAX(idCuenta) from Cuentas", conexion);
+            SqlDataReader drn = comandoPedido.ExecuteReader();
+            drn.Read();
+            string cuenta = drn[0].ToString();
+            PEDIDOS ped = new PEDIDOS(cuenta, mesa);
+            this.Hide();
+            ped.Show();
 
         }
 
@@ -45,15 +53,16 @@ namespace CREPAS_2._0
 
             DataTable dm = new DataTable();
             dm.Columns.Add("mesa");
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 DataRow drm = dm.NewRow();
-                        drm["mesa"] = i;
+                drm["mesa"] = i;
                 dm.Rows.Add(drm);
             }
             mesas_box.DisplayMember = "mesa";
+            mesas_box.ValueMember = "mesa";
             mesas_box.DataSource = dm;
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,3 +76,4 @@ namespace CREPAS_2._0
         }
     }
 }
+
