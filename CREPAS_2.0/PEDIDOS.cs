@@ -25,6 +25,7 @@ namespace CREPAS_2._0
             this.cuentas = cuenta;
             this.mesa = mesa;
 
+
         }
         string mesa, cuentas;
         private void button4_Click(object sender, EventArgs e)
@@ -71,52 +72,31 @@ namespace CREPAS_2._0
             return dt;
         }
 
-        //public DataTable cargarProductos()
-        //{
-        //    int indice = cbx_categorias.SelectedIndex + 1;
-        //    String ind = indice.ToString();
-        //    //int idCatp = 2;
-        //    DataTable dtp = new DataTable();
-
-        //    //int selectedIndex = cbx_categorias.SelectedIndex;
-        //    Object selectedIntem = cbx_categorias.SelectedItem;
-        //    String categoria = selectedIntem.ToString();
-        //   // String categoria = cbx_categorias.SelectedValue.ToString();
-
-        //    SqlCommand comandoIdCategorias = new SqlCommand("SELECT idCategoria FROM Categorias WHERE nombreCategoria = '" + categoria + "';", conexion);
-        //    comandoIdCategorias.Parameters.AddWithValue("@idCategoria", SqlDbType.Int);
-        //    int idCat = Convert.ToInt32(comandoIdCategorias.ExecuteScalar());
-        //    SqlCommand comandoProducto = new SqlCommand("SELECT nombreProd FROM Productos WHERE idCategoria = '"+indice+"'", conexion);
-        //    SqlDataAdapter adaptadorProc = new SqlDataAdapter(comandoProducto);
-        //    adaptadorProc.Fill(dtp);
-        //    //Console.WriteLine("variable " + ind);
-        //    //Console.ReadKey();
-        //    return dtp;
-        //}
         public void PEDIDOS_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'elRinconcitoDataSet.View_ProductosCuentasPedidos' Puede moverla o quitarla según sea necesario.
-            //this.view_ProductosCuentasPedidosTableAdapter.Fill(this.elRinconcitoDataSet.View_ProductosCuentasPedidos);
-            //conexion.Open(); 
-
             cbx_categorias.DataSource = cargarCategorias();
             cbx_categorias.DisplayMember = "nombreCategoria";
-            //cbx_categorias.ValueMember = "idCategoria";
-            //cbx_producto.DataSource = cargarProductos();
-            //cbx_producto.DisplayMember = "nombreProd";
-            //String categoria = cbx_categorias.Text;
-
-
-            //conexion.Close();
-
+            CargarVista(cuentas);
 
         }
 
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void CargarVista(String cuenta)
         {
+            
+            SqlCommand vista = new SqlCommand("SELECT Pr.nombreProd, Pr.precio, Pt.nota FROM Pedidos as Pe, Productos as Pr, Productos_tiene_Pedidos as Pt WHERE Pr.idProducto = Pt.Productos_idProducto AND Pe.idPedido = Pt.Pedidos_idPedido AND Pe.idCuenta = " + cuenta, conexion);
+            SqlDataReader drn = vista.ExecuteReader();
+            dataGridView1.Columns.Add("Nombre", "nombre");
+            dataGridView1.Columns.Add("Precio", "precio");
+            dataGridView1.Columns.Add("Notas", "notas");
 
+            if (drn.HasRows)
+            {
+                while (drn.Read())
+                {
+                    dataGridView1.Rows.Add(drn["nombreProd"].ToString(), drn["precio"].ToString(), drn["nota"].ToString());
+                }
+            }
+            conexion.Close();
         }
 
         private void AGREGAR_Click(object sender, EventArgs e)

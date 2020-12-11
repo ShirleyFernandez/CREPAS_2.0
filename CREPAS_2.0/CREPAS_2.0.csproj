@@ -133,6 +133,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ElRinconcitoDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ElRinconcitoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ElRinconcitoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElRinconcitoDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FireBasePush.cs" />
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
@@ -242,6 +252,28 @@
     </None>
     <None Include="ElRinconcitoDataSet3.xss">
       <DependentUpon>ElRinconcitoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ElRinconcitoDataSet4.xsc">
+      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ElRinconcitoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElRinconcitoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElRinconcitoDataSet4.xss">
+      <DependentUpon>ElRinconcitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ElRinconcitoDataSet5.xsc">
+      <DependentUpon>ElRinconcitoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ElRinconcitoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ElRinconcitoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ElRinconcitoDataSet5.xss">
+      <DependentUpon>ElRinconcitoDataSet5.xsd</DependentUpon>
     </None>
     <None Include="google-services.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

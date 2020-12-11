@@ -44,7 +44,7 @@ namespace CREPAS_2._0
             {
                 try
                 {
-                    SqlConnection SQLConnection = new SqlConnection();
+                    //SqlConnection SQLConnection = new SqlConnection();
 
                     //Hago la Consulta
                     //string commandString = "SELECT Nombre, password FROM pruebas WHERE Nombre= " + this.textBox1 + " AND password= " + this.textBox2 + "";
