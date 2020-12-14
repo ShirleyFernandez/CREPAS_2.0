@@ -28,7 +28,7 @@ namespace CREPAS_2._0
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            LOGIN fr1 = new LOGIN();
+            MENU fr1 = new MENU();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -111,6 +111,46 @@ namespace CREPAS_2._0
             SqlDataReader drn = cmdn.ExecuteReader();
             drn.Read();
             return drn[0].ToString();
+        }
+
+        private void tomarPedidoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            PEDIDOS fr1 = new PEDIDOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void agregarNuevoUsuarioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            AGREGAR_USUARIOS fr1 = new AGREGAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void editarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            MODIFICAR_USUARIOS fr1 = new MODIFICAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            ELIMINAR_USUARIOS fr1 = new ELIMINAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            CUENTAS fr1 = new CUENTAS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
         }
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,30 +10,14 @@ using System.Windows.Forms;
 
 namespace CREPAS_2._0
 {
-    public partial class ELIMINAR_USUARIOS : Form
+    public partial class CUENTAS : Form
     {
-        public ELIMINAR_USUARIOS()
+        public CUENTAS()
         {
             InitializeComponent();
         }
 
-        private void btn_eliminar_Click(object sender, EventArgs e)
-        {
-            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
-            conexion.Open();
-            string usuario = Eusuario_txt.SelectedValue.ToString();
-            string query = "DELETE FROM Usuarios WHERE idUsuario = "+usuario+"";
-            SqlCommand cmdn = new SqlCommand(query, conexion);
-            cmdn.ExecuteReader();
-        }
-
-        private void ELIMINAR_USUARIOS_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //DIRECCIONES DE LOS FORMS DEL MENÚ
+        //BOTONES DEL MENU
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
@@ -76,11 +59,11 @@ namespace CREPAS_2._0
         }
 
         private void editarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {//invocamos otra ventana, esta es la forma mas facil
+        {
+            //invocamos otra ventana, esta es la forma mas facil
             MODIFICAR_USUARIOS fr1 = new MODIFICAR_USUARIOS();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
-
         }
 
         private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -90,5 +73,6 @@ namespace CREPAS_2._0
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
+        //FIN DE LOS BOTONES DEL MENU
     }
 }

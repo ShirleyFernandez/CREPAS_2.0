@@ -167,6 +167,47 @@ namespace CREPAS_2._0
             PEDIDOS_Load(sender, e);
         }
 
+        //BOTONES QUE CORRESPONDEN AL MENU
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            MENU fr13 = new MENU();
+            fr13.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void tomarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            PEDIDOS fr1 = new PEDIDOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void pedidosCocinaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            COCINA fr2 = new COCINA();
+            fr2.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void agregarNuevoUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            AGREGAR_USUARIOS fr1 = new AGREGAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            CUENTAS fr1 = new CUENTAS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             conexion.Open();

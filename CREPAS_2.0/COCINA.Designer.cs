@@ -41,11 +41,11 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tomarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosCocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idPedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,20 +70,19 @@ namespace CREPAS_2._0
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 465);
+            this.panel1.Size = new System.Drawing.Size(280, 572);
             this.panel1.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 226);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(19, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 108);
+            this.label2.Size = new System.Drawing.Size(199, 144);
             this.label2.TabIndex = 2;
             this.label2.Text = "Hola, recuerda marcar\r\n los pedidos que ya se\r\nencuentran listos para\r\ncontinuar " +
     "con los \r\nproductos de las\r\n personas siguientes\r\n";
@@ -94,20 +93,19 @@ namespace CREPAS_2._0
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(30, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(40, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 44);
+            this.label1.Size = new System.Drawing.Size(211, 55);
             this.label1.TabIndex = 1;
             this.label1.Text = "COCINA";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(38, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(51, 96);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(184, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -117,20 +115,19 @@ namespace CREPAS_2._0
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(314, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(419, 37);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 37);
+            this.label3.Size = new System.Drawing.Size(315, 46);
             this.label3.TabIndex = 1;
             this.label3.Text = "Lista de Pedidos";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(390, 317);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(520, 390);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 37);
+            this.button1.Size = new System.Drawing.Size(321, 46);
             this.button1.TabIndex = 2;
             this.button1.Text = "PEDIDO TERMINADO";
             this.button1.UseVisualStyleBackColor = true;
@@ -144,70 +141,73 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem,
             this.tomarPedidoToolStripMenuItem,
             this.pedidosCocinaToolStripMenuItem,
-            this.opcionesToolStripMenuItem,
-            this.cuentasToolStripMenuItem});
+            this.cuentasToolStripMenuItem,
+            this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(873, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1164, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // tomarPedidoToolStripMenuItem
             // 
             this.tomarPedidoToolStripMenuItem.Name = "tomarPedidoToolStripMenuItem";
-            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.tomarPedidoToolStripMenuItem.Text = "Tomar Pedido";
             this.tomarPedidoToolStripMenuItem.Click += new System.EventHandler(this.tomarPedidoToolStripMenuItem_Click);
             // 
             // pedidosCocinaToolStripMenuItem
             // 
             this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
-            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
             this.pedidosCocinaToolStripMenuItem.Click += new System.EventHandler(this.pedidosCocinaToolStripMenuItem_Click);
+            // 
+            // cuentasToolStripMenuItem
+            // 
+            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.cuentasToolStripMenuItem.Text = "Cuentas";
+            this.cuentasToolStripMenuItem.Click += new System.EventHandler(this.cuentasToolStripMenuItem_Click);
             // 
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevoUsuarioToolStripMenuItem,
-            this.cerrarSesiónToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.editarUsuarioToolStripMenuItem,
+            this.eliminarUsuarioToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // agregarNuevoUsuarioToolStripMenuItem
             // 
             this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
-            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
-            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click);
+            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click_1);
             // 
-            // cerrarSesiónToolStripMenuItem
+            // editarUsuarioToolStripMenuItem
             // 
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
+            this.editarUsuarioToolStripMenuItem.Name = "editarUsuarioToolStripMenuItem";
+            this.editarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.editarUsuarioToolStripMenuItem.Text = "Editar usuario";
+            this.editarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuarioToolStripMenuItem_Click);
             // 
-            // salirToolStripMenuItem
+            // eliminarUsuarioToolStripMenuItem
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // cuentasToolStripMenuItem
-            // 
-            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.cuentasToolStripMenuItem.Text = "Cuentas";
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario";
+            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -223,53 +223,67 @@ namespace CREPAS_2._0
             this.mesaDataGridViewTextBoxColumn,
             this.idUsuarioDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.viewCocinaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(215, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(287, 108);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 212);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(861, 261);
             this.dataGridView1.TabIndex = 5;
             // 
             // idPedidoDataGridViewTextBoxColumn
             // 
             this.idPedidoDataGridViewTextBoxColumn.DataPropertyName = "idPedido";
             this.idPedidoDataGridViewTextBoxColumn.HeaderText = "idPedido";
+            this.idPedidoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idPedidoDataGridViewTextBoxColumn.Name = "idPedidoDataGridViewTextBoxColumn";
             this.idPedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPedidoDataGridViewTextBoxColumn.Width = 125;
             // 
             // nombreProdDataGridViewTextBoxColumn
             // 
             this.nombreProdDataGridViewTextBoxColumn.DataPropertyName = "nombreProd";
             this.nombreProdDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.nombreProdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreProdDataGridViewTextBoxColumn.Name = "nombreProdDataGridViewTextBoxColumn";
             this.nombreProdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreProdDataGridViewTextBoxColumn.Width = 125;
             // 
             // notaDataGridViewTextBoxColumn
             // 
             this.notaDataGridViewTextBoxColumn.DataPropertyName = "nota";
             this.notaDataGridViewTextBoxColumn.HeaderText = "nota";
+            this.notaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.notaDataGridViewTextBoxColumn.Name = "notaDataGridViewTextBoxColumn";
             this.notaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.notaDataGridViewTextBoxColumn.Width = 125;
             // 
             // estadoDataGridViewTextBoxColumn
             // 
             this.estadoDataGridViewTextBoxColumn.DataPropertyName = "estado";
             this.estadoDataGridViewTextBoxColumn.HeaderText = "estado";
+            this.estadoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.estadoDataGridViewTextBoxColumn.Name = "estadoDataGridViewTextBoxColumn";
             this.estadoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.estadoDataGridViewTextBoxColumn.Width = 125;
             // 
             // mesaDataGridViewTextBoxColumn
             // 
             this.mesaDataGridViewTextBoxColumn.DataPropertyName = "mesa";
             this.mesaDataGridViewTextBoxColumn.HeaderText = "mesa";
+            this.mesaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.mesaDataGridViewTextBoxColumn.Name = "mesaDataGridViewTextBoxColumn";
             this.mesaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mesaDataGridViewTextBoxColumn.Width = 125;
             // 
             // idUsuarioDataGridViewTextBoxColumn
             // 
             this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "idUsuario";
             this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "Mesero";
+            this.idUsuarioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
             this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idUsuarioDataGridViewTextBoxColumn.Width = 125;
             // 
             // viewCocinaBindingSource
             // 
@@ -287,16 +301,16 @@ namespace CREPAS_2._0
             // 
             // COCINA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(873, 384);
+            this.ClientSize = new System.Drawing.Size(1164, 473);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "COCINA";
             this.Text = "COCINA";
             this.Load += new System.EventHandler(this.COCINA_Load);
@@ -325,10 +339,6 @@ namespace CREPAS_2._0
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tomarPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidosCocinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ElRinconcitoDataSet1 elRinconcitoDataSet1;
@@ -340,5 +350,9 @@ namespace CREPAS_2._0
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mesaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
     }
 }

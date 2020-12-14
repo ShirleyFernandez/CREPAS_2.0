@@ -43,7 +43,10 @@ namespace CREPAS_2._0
 
         private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //invocamos otra ventana, esta es la forma mas facil
+            CUENTAS fr1 = new CUENTAS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
         }
 
         private void opcionesToolStripMenuItem_Click(object sender, EventArgs e)
