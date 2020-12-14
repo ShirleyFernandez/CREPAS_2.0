@@ -69,7 +69,7 @@ namespace CREPAS_2._0
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(775, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(775, 30);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,24 +78,28 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.inicioToolStripMenuItem.Text = "Inicio";
+            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // tomarPedidoToolStripMenuItem
             // 
             this.tomarPedidoToolStripMenuItem.Name = "tomarPedidoToolStripMenuItem";
             this.tomarPedidoToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.tomarPedidoToolStripMenuItem.Text = "Tomar Pedido";
+            this.tomarPedidoToolStripMenuItem.Click += new System.EventHandler(this.tomarPedidoToolStripMenuItem_Click);
             // 
             // pedidosCocinaToolStripMenuItem
             // 
             this.pedidosCocinaToolStripMenuItem.Name = "pedidosCocinaToolStripMenuItem";
             this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
+            this.pedidosCocinaToolStripMenuItem.Click += new System.EventHandler(this.pedidosCocinaToolStripMenuItem_Click);
             // 
             // cuentasToolStripMenuItem
             // 
             this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
             this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.cuentasToolStripMenuItem.Text = "Cuentas";
+            this.cuentasToolStripMenuItem.Click += new System.EventHandler(this.cuentasToolStripMenuItem_Click);
             // 
             // opcionesToolStripMenuItem
             // 
@@ -104,26 +108,30 @@ namespace CREPAS_2._0
             this.editarUsuarioToolStripMenuItem,
             this.eliminarUsuarioToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
             this.opcionesToolStripMenuItem.Text = "Opciones";
+            this.opcionesToolStripMenuItem.Click += new System.EventHandler(this.opcionesToolStripMenuItem_Click);
             // 
             // agregarNuevoUsuarioToolStripMenuItem
             // 
             this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
             this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
+            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click);
             // 
             // editarUsuarioToolStripMenuItem
             // 
             this.editarUsuarioToolStripMenuItem.Name = "editarUsuarioToolStripMenuItem";
             this.editarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.editarUsuarioToolStripMenuItem.Text = "Editar usuario";
+            this.editarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuarioToolStripMenuItem_Click);
             // 
             // eliminarUsuarioToolStripMenuItem
             // 
             this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
             this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
             this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario";
+            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
             // 
             // panel1
             // 

@@ -136,7 +136,7 @@ namespace CREPAS_2._0
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 303);
+            this.label6.Location = new System.Drawing.Point(37, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(221, 96);
             this.label6.TabIndex = 3;
@@ -148,7 +148,7 @@ namespace CREPAS_2._0
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(7, 55);
+            this.label1.Location = new System.Drawing.Point(7, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(299, 29);
             this.label1.TabIndex = 1;
@@ -157,7 +157,7 @@ namespace CREPAS_2._0
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 112);
+            this.pictureBox1.Location = new System.Drawing.Point(66, 114);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(171, 155);
