@@ -31,8 +31,26 @@ namespace CREPAS_2._0
         
         private void button4_Click(object sender, EventArgs e)
         {
-
+            conexion.Open();
+            SqlCommand obtenerTotal = new SqlCommand("select SUM(costo) from Productos_tiene_Pedidos where Pedidos_idCuenta = " + cuentas + "", conexion);
+            SqlDataReader drn = obtenerTotal.ExecuteReader();
+            drn.Read();
+            string cadenaTotal = drn[0].ToString();
+            double total = Convert.ToDouble(cadenaTotal);
+            txt_total.Text = "$"+cadenaTotal+".00";
+            conexion.Close();
+            actualizarCuenta(total);
+            
         }
+
+        private void actualizarCuenta(double total)
+        {
+            conexion.Open();
+            SqlCommand actualizaCuenta = new SqlCommand("UPDATE Cuentas SET total = "+total+" WHERE idCuenta = " + cuentas + "",conexion);
+            actualizaCuenta.ExecuteReader();
+            conexion.Close();
+        }
+
 
         //PEDIDOS COCINA
         private void button1_Click(object sender, EventArgs e)
@@ -206,6 +224,11 @@ namespace CREPAS_2._0
             CUENTAS fr1 = new CUENTAS();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)
