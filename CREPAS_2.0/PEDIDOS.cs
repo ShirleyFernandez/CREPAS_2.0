@@ -29,6 +29,17 @@ namespace CREPAS_2._0
 
         }
         
+        private void mostrarTotal()
+        {
+            conexion.Open();
+            SqlCommand obtenerTotal = new SqlCommand("select SUM(costo) from Productos_tiene_Pedidos where Pedidos_idCuenta = " + cuentas + "", conexion);
+            SqlDataReader drn = obtenerTotal.ExecuteReader();
+            drn.Read();
+            string cadenaTotal = drn[0].ToString();
+            double total = Convert.ToDouble(cadenaTotal);
+            txt_total.Text = "$" + cadenaTotal + ".00";
+            conexion.Close();
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             conexion.Open();
@@ -99,6 +110,7 @@ namespace CREPAS_2._0
             cbx_categorias.DataSource = cargarCategorias();
             cbx_categorias.DisplayMember = "nombreCategoria";
             CargarVista(cuentas);
+            mostrarTotal();
 
         }
 
@@ -126,6 +138,7 @@ namespace CREPAS_2._0
             int costo = (Convert.ToInt32(p)) * (Convert.ToInt32(cantidad));
             productosTienePedidos(producto, ultimo, categoria, cuentas, cantidad, nota, costo);
             PEDIDOS_Load(sender, e);
+            mostrarTotal();
         }
         private void productosTienePedidos(string idProduto, int idPedido, int categoria, string cuenta, string cantidad, string nota, int costo)
         {
@@ -187,6 +200,7 @@ namespace CREPAS_2._0
             eliminarPtp(idPedido);
             eliminarPedido(idPedido);
             PEDIDOS_Load(sender, e);
+            mostrarTotal();
         }
 
         //BOTONES QUE CORRESPONDEN AL MENU
