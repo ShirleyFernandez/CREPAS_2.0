@@ -82,15 +82,15 @@ namespace CREPAS_2._0
             dtu.Columns.Add("nombre");
 
             DataRow dru1 = dtu.NewRow();
-            dru1["id"] = "001";
+            dru1["id"] = "1";
             dru1["nombre"] = "Administrador";
             dtu.Rows.Add(dru1);
             DataRow dru2 = dtu.NewRow();
-            dru2["id"] = "002";
+            dru2["id"] = "2";
             dru2["nombre"] = "Cocinero";
             dtu.Rows.Add(dru2);
             DataRow dru3 = dtu.NewRow();
-            dru3["id"] = "003";
+            dru3["id"] = "3";
             dru3["nombre"] = "Mesero";
             dtu.Rows.Add(dru3);
 

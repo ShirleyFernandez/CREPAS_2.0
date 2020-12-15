@@ -41,6 +41,7 @@ namespace CREPAS_2._0
             conexion.Close();
             actualizarCuenta(total);
             
+
         }
 
         private void actualizarCuenta(double total)
@@ -49,6 +50,9 @@ namespace CREPAS_2._0
             SqlCommand actualizaCuenta = new SqlCommand("UPDATE Cuentas SET total = "+total+" WHERE idCuenta = " + cuentas + "",conexion);
             actualizaCuenta.ExecuteReader();
             conexion.Close();
+            PEDIDOS_PRINCIPAL ped = new PEDIDOS_PRINCIPAL();
+            this.Hide();
+            ped.Show();
         }
 
 

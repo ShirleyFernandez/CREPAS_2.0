@@ -13,6 +13,7 @@ namespace CREPAS_2._0
 {
     public partial class ELIMINAR_USUARIOS : Form
     {
+        SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
         public ELIMINAR_USUARIOS()
         {
             InitializeComponent();
@@ -20,17 +21,40 @@ namespace CREPAS_2._0
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = new SqlConnection("Data Source=equipo2.database.windows.net;Initial Catalog=ElRinconcito;Persist Security Info=True; User ID=crepa;Password=creperiaElrinconcito12");
-            conexion.Open();
             string usuario = Eusuario_txt.SelectedValue.ToString();
-            string query = "DELETE FROM Usuarios WHERE idUsuario = "+usuario+"";
-            SqlCommand cmdn = new SqlCommand(query, conexion);
+            eliminar(usuario);
+            ELIMINAR_USUARIOS_Load(sender, e);
+
+        }
+
+        public void eliminar(string usuario)
+        {
+            cambio(usuario);
+            conexion.Open();
+            SqlCommand cmdn = new SqlCommand("DELETE FROM Usuarios WHERE idUsuario = " + usuario + "", conexion);
             cmdn.ExecuteReader();
+            conexion.Close();
+        }
+
+        public void cambio (string usuario)
+        {
+            conexion.Open();
+            SqlCommand cmdn = new SqlCommand("UPDATE Cuentas SET idUsuario = 1 WHERE idUsuario = " + usuario + "", conexion);
+            cmdn.ExecuteReader();
+            conexion.Close();
         }
 
         private void ELIMINAR_USUARIOS_Load(object sender, EventArgs e)
         {
-
+            conexion.Open();
+            DataTable dt = new DataTable();
+            SqlCommand usuarios = new SqlCommand("SELECT idUsuario, nombre FROM Usuarios", conexion);
+            SqlDataAdapter adaptadorCat = new SqlDataAdapter(usuarios);
+            adaptadorCat.Fill(dt);
+            Eusuario_txt.ValueMember = "idUsuario";
+            Eusuario_txt.DisplayMember = "nombre";
+            Eusuario_txt.DataSource = dt;
+            conexion.Close();
         }
 
 
