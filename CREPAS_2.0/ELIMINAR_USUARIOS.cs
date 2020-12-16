@@ -70,7 +70,7 @@ namespace CREPAS_2._0
         private void tomarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            PEDIDOS fr1 = new PEDIDOS();
+            PEDIDOS_PRINCIPAL fr1 = new PEDIDOS_PRINCIPAL();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }

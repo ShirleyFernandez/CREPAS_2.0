@@ -57,21 +57,21 @@ namespace CREPAS_2._0
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("CHICKEN Pie Height", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(86, 407);
+            this.label8.Location = new System.Drawing.Point(52, 365);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 100);
+            this.label8.Size = new System.Drawing.Size(180, 125);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Bienvenido \r\n:)\r\n\r\n\r\n";
+            this.label8.Text = "Bienvenido  :)\r\nSelecciona la \r\nopción que\r\nvayas a realizar\r\n\r\n";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Quotable", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Chicken Quiche", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(86, 108);
+            this.label1.Location = new System.Drawing.Point(70, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 53);
+            this.label1.Size = new System.Drawing.Size(153, 66);
             this.label1.TabIndex = 1;
             this.label1.Text = "MENU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -79,7 +79,7 @@ namespace CREPAS_2._0
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 206);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 172);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,9 +88,10 @@ namespace CREPAS_2._0
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(350, 62);
+            this.button1.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(323, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 47);
+            this.button1.Size = new System.Drawing.Size(165, 47);
             this.button1.TabIndex = 31;
             this.button1.Text = "TOMAR PEDIDO";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,9 +99,10 @@ namespace CREPAS_2._0
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 132);
+            this.button2.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(323, 125);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 47);
+            this.button2.Size = new System.Drawing.Size(165, 71);
             this.button2.TabIndex = 32;
             this.button2.Text = "PEDIDOS DE COCINA";
             this.button2.UseVisualStyleBackColor = true;
@@ -108,9 +110,10 @@ namespace CREPAS_2._0
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(350, 303);
+            this.button3.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(323, 316);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 48);
+            this.button3.Size = new System.Drawing.Size(165, 48);
             this.button3.TabIndex = 33;
             this.button3.Text = "SALIR";
             this.button3.UseVisualStyleBackColor = true;
@@ -118,9 +121,10 @@ namespace CREPAS_2._0
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(350, 204);
+            this.button4.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(323, 222);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 57);
+            this.button4.Size = new System.Drawing.Size(165, 57);
             this.button4.TabIndex = 34;
             this.button4.Text = "USUARIOS";
             this.button4.UseVisualStyleBackColor = true;
@@ -130,13 +134,16 @@ namespace CREPAS_2._0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(560, 423);
+            this.ClientSize = new System.Drawing.Size(560, 404);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MENU";
             this.Text = "MENU";
             this.panel1.ResumeLayout(false);

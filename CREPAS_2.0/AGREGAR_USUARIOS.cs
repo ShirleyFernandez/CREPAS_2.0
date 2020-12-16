@@ -21,7 +21,7 @@ namespace CREPAS_2._0
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            LOGIN fr1 = new LOGIN();
+            MENU fr1 = new MENU();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -29,7 +29,7 @@ namespace CREPAS_2._0
         private void tomarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            PEDIDOS fr1 = new PEDIDOS();
+            PEDIDOS_PRINCIPAL fr1 = new PEDIDOS_PRINCIPAL();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -99,6 +99,22 @@ namespace CREPAS_2._0
             tipo_txt.DataSource = dtu;
 
 
+        }
+
+        private void editarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            MODIFICAR_USUARIOS fr1 = new MODIFICAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            ELIMINAR_USUARIOS fr1 = new ELIMINAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
         }
     }
 }

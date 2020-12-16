@@ -44,9 +44,11 @@ namespace CREPAS_2._0
             this.Hide();
         }
 
+        //BOTON DE SALIDA
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Application.ExitThread();
+            this.Close();
         }
     }
 }

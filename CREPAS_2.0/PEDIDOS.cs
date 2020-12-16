@@ -249,6 +249,11 @@ namespace CREPAS_2._0
 
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)
         {
             conexion.Open();

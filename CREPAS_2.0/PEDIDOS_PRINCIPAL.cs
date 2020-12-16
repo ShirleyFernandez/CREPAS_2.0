@@ -78,7 +78,7 @@ namespace CREPAS_2._0
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            LOGIN fr1 = new LOGIN();
+            MENU fr1 = new MENU();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -131,6 +131,11 @@ namespace CREPAS_2._0
             ELIMINAR_USUARIOS fr1 = new ELIMINAR_USUARIOS();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

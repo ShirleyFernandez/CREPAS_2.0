@@ -31,7 +31,7 @@ namespace CREPAS_2._0
         private void tomarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            PEDIDOS fr1 = new PEDIDOS();
+            PEDIDOS_PRINCIPAL fr1 = new PEDIDOS_PRINCIPAL();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -94,7 +94,7 @@ namespace CREPAS_2._0
         {
             DateTime fecha = new DateTime();
             fecha = DateTime.Parse(cmb_fecha.SelectedValue.ToString());
-            MessageBox.Show(fecha.ToString("yyyy/MM/dd"));
+            //MessageBox.Show(fecha.ToString("yyyy/MM/dd"));
             conexion.Open();
             DataTable dt = new DataTable();
             SqlCommand vista = new SqlCommand("SELECT C.idCuenta, U.nombre, C.total FROM Cuentas as C, Usuarios as U WHERE C.idUsuario = U.idUsuario AND C.total > 0 AND fecha = '" + fecha.ToString("yyyy/MM/dd") + "'", conexion);
@@ -114,6 +114,11 @@ namespace CREPAS_2._0
             string g = drn[0].ToString();
             conexion.Close();
             return g;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,8 +42,8 @@
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -52,18 +52,19 @@
             // Eusuario_txt
             // 
             this.Eusuario_txt.FormattingEnabled = true;
-            this.Eusuario_txt.Location = new System.Drawing.Point(395, 127);
-            this.Eusuario_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Eusuario_txt.Location = new System.Drawing.Point(313, 204);
+            this.Eusuario_txt.Margin = new System.Windows.Forms.Padding(4);
             this.Eusuario_txt.Name = "Eusuario_txt";
-            this.Eusuario_txt.Size = new System.Drawing.Size(204, 24);
+            this.Eusuario_txt.Size = new System.Drawing.Size(310, 24);
             this.Eusuario_txt.TabIndex = 0;
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(499, 283);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_eliminar.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Location = new System.Drawing.Point(483, 257);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(100, 28);
+            this.btn_eliminar.Size = new System.Drawing.Size(140, 40);
             this.btn_eliminar.TabIndex = 2;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
@@ -72,7 +73,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 206);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 192);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 165);
@@ -83,11 +84,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Chicken Quiche", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(12, 81);
+            this.label2.Location = new System.Drawing.Point(34, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(251, 110);
+            this.label2.Size = new System.Drawing.Size(189, 106);
             this.label2.TabIndex = 1;
             this.label2.Text = "ELIMINAR\r\nUSUARIO\r\n";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,10 +96,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(56, 388);
+            this.label8.Font = new System.Drawing.Font("CHICKEN Pie Height", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(38, 373);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 120);
+            this.label8.Size = new System.Drawing.Size(185, 130);
             this.label8.TabIndex = 25;
             this.label8.Text = "Selecciona el \r\nusuario que se \r\ndecea eliminar :)\r\n\r\n\r\n";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -147,8 +148,7 @@
             // 
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarNuevoUsuarioToolStripMenuItem,
-            this.editarUsuarioToolStripMenuItem,
-            this.eliminarUsuarioToolStripMenuItem});
+            this.editarUsuarioToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
@@ -167,13 +167,6 @@
             this.editarUsuarioToolStripMenuItem.Text = "Editar usuario";
             this.editarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuarioToolStripMenuItem_Click);
             // 
-            // eliminarUsuarioToolStripMenuItem
-            // 
-            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
-            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario";
-            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -187,21 +180,35 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(707, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(678, 30);
             this.menuStrip1.TabIndex = 30;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lumie", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(301, 58);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Eliminar al usuario \r\npermanentemente del sistema";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // ELIMINAR_USUARIOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(707, 487);
+            this.ClientSize = new System.Drawing.Size(678, 462);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.Eusuario_txt);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "ELIMINAR_USUARIOS";
             this.Text = "ELIMINAR_USUARIOS";
             this.Load += new System.EventHandler(this.ELIMINAR_USUARIOS_Load);
@@ -230,7 +237,7 @@
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarUsuarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label label1;
     }
 }
