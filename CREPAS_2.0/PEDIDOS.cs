@@ -215,7 +215,7 @@ namespace CREPAS_2._0
         private void tomarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //invocamos otra ventana, esta es la forma mas facil
-            PEDIDOS fr1 = new PEDIDOS();
+            PEDIDOS_PRINCIPAL fr1 = new PEDIDOS_PRINCIPAL();
             fr1.Show(); //Crear una instancia de muestra del formulario
             this.Hide();
         }
@@ -236,13 +236,7 @@ namespace CREPAS_2._0
             this.Hide();
         }
 
-        private void cuentasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //invocamos otra ventana, esta es la forma mas facil
-            CUENTAS fr1 = new CUENTAS();
-            fr1.Show(); //Crear una instancia de muestra del formulario
-            this.Hide();
-        }
+      
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -252,6 +246,38 @@ namespace CREPAS_2._0
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cuentasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            CUENTAS fr1 = new CUENTAS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void agregarNuevoUsuarioToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            AGREGAR_USUARIOS fr1 = new AGREGAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void editarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             //invocamos otra ventana, esta es la forma mas facil
+             MODIFICAR_USUARIOS fr1 = new MODIFICAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //invocamos otra ventana, esta es la forma mas facil
+            ELIMINAR_USUARIOS fr1 = new ELIMINAR_USUARIOS();
+            fr1.Show(); //Crear una instancia de muestra del formulario
+            this.Hide();
         }
 
         private void cbx_categorias_SelectedIndexChanged(object sender, EventArgs e)

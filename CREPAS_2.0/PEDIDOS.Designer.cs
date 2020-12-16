@@ -51,11 +51,15 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tomarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidosCocinaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cbx_categorias = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
+            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarNuevoUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -246,7 +250,8 @@ namespace CREPAS_2._0
             this.inicioToolStripMenuItem,
             this.tomarPedidoToolStripMenuItem,
             this.pedidosCocinaToolStripMenuItem,
-            this.cuentasToolStripMenuItem});
+            this.cuentasToolStripMenuItem,
+            this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -274,13 +279,6 @@ namespace CREPAS_2._0
             this.pedidosCocinaToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.pedidosCocinaToolStripMenuItem.Text = "Pedidos Cocina";
             this.pedidosCocinaToolStripMenuItem.Click += new System.EventHandler(this.pedidosCocinaToolStripMenuItem_Click);
-            // 
-            // cuentasToolStripMenuItem
-            // 
-            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
-            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
-            this.cuentasToolStripMenuItem.Text = "Cuentas";
-            this.cuentasToolStripMenuItem.Click += new System.EventHandler(this.cuentasToolStripMenuItem_Click);
             // 
             // cbx_categorias
             // 
@@ -323,6 +321,44 @@ namespace CREPAS_2._0
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(100, 22);
             this.txt_total.TabIndex = 32;
+            // 
+            // cuentasToolStripMenuItem
+            // 
+            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.cuentasToolStripMenuItem.Text = "Cuentas";
+            this.cuentasToolStripMenuItem.Click += new System.EventHandler(this.cuentasToolStripMenuItem_Click_1);
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarNuevoUsuarioToolStripMenuItem,
+            this.editarUsuarioToolStripMenuItem,
+            this.eliminarUsuarioToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
+            // 
+            // agregarNuevoUsuarioToolStripMenuItem
+            // 
+            this.agregarNuevoUsuarioToolStripMenuItem.Name = "agregarNuevoUsuarioToolStripMenuItem";
+            this.agregarNuevoUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.agregarNuevoUsuarioToolStripMenuItem.Text = "Agregar nuevo usuario";
+            this.agregarNuevoUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevoUsuarioToolStripMenuItem_Click_1);
+            // 
+            // editarUsuarioToolStripMenuItem
+            // 
+            this.editarUsuarioToolStripMenuItem.Name = "editarUsuarioToolStripMenuItem";
+            this.editarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.editarUsuarioToolStripMenuItem.Text = "Editar usuario";
+            this.editarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.editarUsuarioToolStripMenuItem_Click);
+            // 
+            // eliminarUsuarioToolStripMenuItem
+            // 
+            this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar usuario";
+            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
             // 
             // PEDIDOS
             // 
@@ -388,11 +424,15 @@ namespace CREPAS_2._0
         private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tomarPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedidosCocinaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbx_categorias;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarNuevoUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
     }
 }
