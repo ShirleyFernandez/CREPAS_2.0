@@ -36,7 +36,7 @@ namespace CREPAS_2._0
             SqlDataReader drn = obtenerTotal.ExecuteReader();
             drn.Read();
             string cadenaTotal = drn[0].ToString();
-            double total = Convert.ToDouble(cadenaTotal);
+            //double total = Convert.ToDouble(cadenaTotal);
             txt_total.Text = "$" + cadenaTotal + ".00";
             conexion.Close();
         }
